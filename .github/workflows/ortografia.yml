@@ -1,0 +1,22 @@
+name: Ortografia
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  Ortografia:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: 🏗 Instalación de hunspell
+      run: |
+        sudo apt-get install hunspell hunspell-es hunspell-en-us hunspell-en-gb
+
+    - name: 💬 Comprobando si existen errores ortográficos
+      run: |
+        if [[ $(find . -name "*.tex" -exec hunspell -d es_ES,en_US,en_GB -p diccionario.dic -L -t -i utf-8 '{}' \;) ]]; then
+          exit 1
+        else
+          exit 0
+        fi
