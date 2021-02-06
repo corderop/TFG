@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REQUISITOS DEL PROYECTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Requisitos}
+
+\subsection{Requisitos funcionales}
+
+\begin{enumerate}[start=1,label={RF-\arabic*.}]
+
+    \item La aplicación contemplará tres secciones: gestión de personas, gestión de alojamiento y gestión de actividades.
+    \item Cada usuario que use el sistema tendrá que identificarse con unas credenciales únicas.
+    \item Existirán 4 roles de usuario que restringirán que actividades podrán o no hacer. Estos serán: administrador, estándar, invitado y participante.
+    \item Los usuarios con el rol de administrador serán los únicos que podrán crear, modificar y eliminar a otros usuarios, así como modificar sus roles.
+    \item Los usuarios con el rol de invitado podrán tener restringido el acceso a cualquiera de las secciones.
+    \item Los usuarios con el rol de participante solo tendrán acceso a la sección de actividades.
+    \item El sistema contemplará una opción de exportación de los datos de personas, de ocupación y de participación en actividades, a diferentes formatos (csv y excel).
+    \item Las estadísticas (RF-21, RF-31) podrán mostrarse de forma total o filtradas por periodos de tiempo (semanas, meses, años...).
+
+\end{enumerate}
+
+\subsubsection{Gestión de personas}
+
+\begin{enumerate}[start=9,label={RF-\arabic*.}]
+
+    \item Existirán cuatro tipos de personas en el sistema: residentes, voluntarios, socios y colaboradores.
+    \item Se podrán añadir y eliminar personas del sistema.
+    \item Se podrá modificar cualquier dato de las personas del sistema.
+    \item Se podrán añadir y eliminar documentos asociados a una persona.
+    \item Se podrán dar de alta y de baja a los residentes más de una vez. Se considera un alta cuando entran a residir en la fundación y una baja cuando la abandonan.
+    \item La información de cada uno de los residentes se seguirá almacenando en el sistema aunque se le haya dado de baja de la fundación, a no ser que un administrador decida eliminar a la persona del sistema. 
+    \item Los usuarios con el rol de administrador podrán:
+    \begin{itemize}
+        \item Añadir y eliminar personas del sistema.
+        \item Dar de alta y de baja a personas.
+        \item Modificar los datos de una persona.
+        \item Añadir y eliminar documentos asociados a una persona.
+        \item Consultar los datos de cualquier persona del sistema.
+        \item Crear y eliminar usuarios del sistema.
+    \end{itemize}
+    \item Los usuarios con el rol estándar podrán:
+        \begin{itemize}
+            \item Dar de alta y de baja a personas.
+            \item Añadir personas al sistema.
+            \item Consultar datos de las personas.
+            \item Consultar los documentos de las personas.
+        \end{itemize}
+    \item Los usuarios con el rol invitado podrán:
+        \begin{itemize}
+            \item Consultar los datos de las personas
+            \item Consultar los documentos de las personas
+        \end{itemize}
+    \item Los usuarios con el rol de participante no podrán acceder a esta sección.
+    \item El acceso a la información por parte de los usuarios con el rol de invitados podrá estar limitada en cuanto a tipos de personas.
+    \item El sistema contemplará búsquedas de personas por cualquiera de los datos asociados a estas o colectivos a los que pertenezcan.
+    \item Se contemplarán búsquedas mixtas e individuales, es decir, búsquedas dentro de un tipo de persona concreto, o búsquedas de cualquier tipo de persona sobre campos coincidentes (búsqueda por nombre, ocupación etc.).
+    \item Los documentos asociados a las personas serán de tipo imagen o documento de texto (pdf, doc, odt).
+    \item A la hora de añadir una fotografía desde la aplicación, se proporcionará una cámara nativa además de incluir la opción de agregarla desde la galería de imágenes del smartphone.
+    \item La aplicación tendrá un apartado dedicado a mostrar estadísticas sobre:
+        \begin{itemize}
+            \item Número de residentes totales de la fundación.
+            \item Número de residentes filtrados por género.
+            \item Número de residentes menores.
+            \item Número de residentes hijos de otro residente.
+            \item Número de residentes filtrados por colectivo al que pertenecen.
+            \item Número de voluntarios dados de alta.
+            \item Número de residentes dados de alta.
+            \item Número de residentes dados de baja.
+            \item Número de voluntarios.
+            \item Número de socios nuevos.
+            \item Número de personas empadronadas.
+            \item Número de personas con documentación arreglada.
+            \item Número de personas que se fueron por cada uno de los diferentes motivos.
+        \end{itemize}
+    \item Se contemplará un sistema de citas asociadas a cada residente de la fundación:
+        \begin{itemize}
+            \item Se almacenarán citas importantes asociadas a cada uno de los residentes.
+            \item Se notificará a través de la aplicación a los usuarios con los roles de administrador y estándar un día antes de la cita y el mismo día de esta.
+            \item Se notificará a por email al residente un día antes de la cita y el mismo día de esta.
+        \end{itemize}
+
+\end{enumerate}
+
+\subsubsection{Gestión de alojamiento}
+
+\begin{enumerate}[start=26,label={RF-\arabic*.}]
+
+    \item Se podrán añadir, eliminar y modificar casas en el sistema.
+    \item Se podrán añadir, eliminar y modificar habitaciones dentro de las casas.
+    \item Se podrán añadir, eliminar y modificar residentes de las habitaciones.
+    \item Se podrá cambiar de casa o habitación a los residentes.
+    \item Existirá una ocupación para cada habitación.
+    \item Los usuarios con el rol de administrador en tema de alojamientos podrán:
+        \begin{enumerate}
+            \item Añadir y eliminar casas.
+            \item Añadir o eliminar habitaciones dentro de las casas.
+            \item Modificar la casa o habitación de un residente.
+            \item Consultar los residentes que ocupan una casa o habitación.
+        \end{enumerate}
+    \item Los usuarios con el rol estándar en tema de alojamientos podrán:
+        \begin{enumerate}
+            \item Asignar una casa o habitación a un residente que no tengan ninguna asignada ya.
+            \item Consultar los residentes que ocupan una casa o habitación. 
+        \end{enumerate}
+    \item Los usuarios con el rol de invitados solo podrán ver quien ocupa cada casa/habitación.
+    \item Los usuarios con el rol de participante no podrán acceder a la sección de alojamientos.
+    \item Las estadísticas que debe cubrir la aplicación sobre los alojamientos serán:
+        \begin{itemize}
+            \item Porcentaje de ocupación actual de las casas.
+            \item Número de plazas libre sobre el total.
+            \item Número de casas con alguna plaza libre.
+        \end{itemize}    
+
+\end{enumerate}
+
+\subsubsection{Gestión de actividades}
+
+\begin{enumerate}[start=36,label={RF-\arabic*.}]
+
+    \item Los usuarios con el rol de administrador podrán:
+        \begin{itemize}
+            \item Añadir nuevas actividades.
+            \item Eliminar actividades.
+            \item Ver actividades disponibles.
+            \item Ver la información de cualquier actividad.
+        \end{itemize}
+    \item Los usuarios con el rol estándar podrán:
+        \begin{itemize}
+            \item Añadir nuevas actividades.
+            \item Ver actividades disponibles.
+            \item Ver la información de cualquier actividad.
+        \end{itemize}
+    \item Los usuarios con el rol de asistente podrán:
+        \begin{itemize}
+            \item Apuntarse a actividades.
+            \item Desapuntarse de actividades.
+            \item Ver actividades disponibles.
+            \item Ver la información de cualquier actividad.
+        \end{itemize}
+
+\end{enumerate}
+
+\subsection{Requisitos no funcionales}
+
+\begin{enumerate}[start=1,label={RNF-\arabic*.}]
+    \item La aplicación debe estar desarrollada tanto para Android como para IOS.
+    \item Todos los datos se transmitirán y almacenarán de forma segura, evitando así exponer información delicada.
+    \item Los datos de carácter sensible no se almacenarán nunca en el dispositivo del usuario.
+    \item Todo el sistema tendrá que cumplir con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.
+\end{enumerate}
+
+\subsubsection{Gestión de personas}
+
+\begin{enumerate}[start=5,label={RNF-\arabic*.}]
+
+    \item Cada persona tendrá asociados datos personales, así como documentos.
+    \item Los datos asociados de los residentes serán:
+        \begin{itemize}
+            \item Nombre y apellidos
+            \item Documento identificativo (DNI, pasaporte...)
+            \item Fecha de nacimiento
+            \item Genero
+            \item Email
+            \item Teléfono móvil con prefijo
+            \item Nacionalidades
+            \item País de nacimiento
+            \item País de procedencia
+            \item Fotografía
+            \item Fechas de ingreso
+            \item Fechas de baja
+            \item Motivo de baja
+            \item Estado civil
+            \item Colaborador allegado (Colaborador que ha traído a esta persona a la fundación)
+            \item Formación (ESO, Bachillerato...)
+            \item Ocupación
+            \item Factores de riesgo
+            \item Si tiene o no el permiso de trabajo
+            \item Un valor identificativo del estado de su documentación española
+            \item Un valor identificativo del estado de su empadronamiento en caso de que esté residiendo en ese momento
+            \item Un valor identificativo del estado de su tarjeta sanitaria
+        \end{itemize}
+    \item Los residentes podrán tener una relación hijo/a-padre/madre entre ellos
+    \item Los residentes podrán pertenecer a colectivos.
+    \item Los datos asociados de los voluntarios serán:
+        \begin{itemize}
+            \item Nombre y apellidos
+            \item Documento identificativo (DNI, pasaporte...)
+            \item Fecha de nacimiento
+            \item Género
+            \item Email
+            \item Nacionalidad
+            \item Fotografía
+            \item Dirección
+            \item Ciudad
+            \item País
+            \item Nacionalidad
+            \item Teléfono
+            \item Conocimientos
+            \item Preferencias
+            \item Idiomas
+            \item Disponibilidad de mañanas
+            \item Disponibilidad de tardes
+            \item Disponibilidad de fines de semana
+            \item Fechas de llegada
+            \item Fechas de salida
+            \item Experiencias previas
+        \end{itemize} 
+        
+    \item Los conocimientos de un voluntario/colaborador posibles serán: informática, diseño web, cocina, agricultura, guardería, albañilería, fontanería u otros en caso de que el usuario que los quiera especificar.
+    \item Las preferencias de un voluntario serán seleccionadas sobre los conocimientos previamente indicados.
+    \item Los datos asociados de los colaboradores serán:
+        \begin{itemize}
+            \item Nombre y apellidos
+            \item Documento identificativo (DNI, pasaporte...)
+            \item Fecha de nacimiento
+            \item Género
+            \item Email
+            \item Nacionalidad
+            \item Dirección
+            \item Ciudad
+            \item País
+            \item Edad
+            \item Teléfono
+        \end{itemize}
+    \item Los datos asociados a los socios serán:
+        \begin{itemize}
+            \item Nombre y apellidos
+            \item Fecha de inicio
+            \item Cuota
+            \item Relación con otro socio
+            \item Email
+            \item Indicador si quiere recibir una newsletter
+        \end{itemize}
+    \item El sistema seguirá almacenando los datos de las personas a pesar de su baja en la fundación.
+    \item Todos los teléfonos almacenados en el sistema tendrán el prefijo del país correspondiente.
+
+\end{enumerate}
+
+\subsubsection{Gestión de alojamiento}
+
+\begin{enumerate}[start=16,label={RNF-\arabic*.}]
+
+    \item Cada casa estará identificada por una letra única en base a las demás casas. En caso de tener más casas de las letras disponibles, se comenzarán a usar combinaciones de dos letras.
+    \item Cada habitación estará identificada por un número único en base a las demás habitaciones dentro de la misma casa.
+    \item Cada habitación tendrá un número de plazas y una ocupación (residentes actuales).
+
+\end{enumerate}
+
+\subsubsection{Gestión de actividades}
+
+\begin{enumerate}[start=16,label={RNF-\arabic*.}]
+
+    \item Cada actividad tendrá asociada la siguiente información:
+        \begin{itemize}
+            \item Nombre
+            \item Foto de la actividad
+            \item Persona que realiza la actividad
+            \item Descripción
+            \item Fecha
+        \end{itemize}
+    \item Se almacenará información básica acerca de las personas que realizan las actividades:
+        \begin{itemize}
+            \item Nombre
+            \item Descripción (cualidades, ...)
+            \item Cargo actual (en caso de ser relevante para las actividades que tutoriza)
+        \end{itemize}
+\end{enumerate}
