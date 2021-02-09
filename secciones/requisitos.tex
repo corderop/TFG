@@ -15,7 +15,7 @@
     \item Los usuarios con el rol de invitado podrán tener restringido el acceso a cualquiera de las secciones.
     \item Los usuarios con el rol de participante solo tendrán acceso a la sección de actividades.
     \item El sistema contemplará una opción de exportación de los datos de personas, de ocupación y de participación en actividades, a diferentes formatos (csv y excel).
-    \item Las estadísticas (RF-21, RF-31) podrán mostrarse de forma total o filtradas por periodos de tiempo (semanas, meses, años...).
+    \item Las estadísticas (\ref{rf-es-personas}, \ref{rf-es-ocupacion}) podrán mostrarse de forma total o filtradas por periodos de tiempo (semanas, meses, años...).
 
 \end{enumerate}
 
@@ -28,7 +28,7 @@
     \item Se podrá modificar cualquier dato de las personas del sistema.
     \item Se podrán añadir y eliminar documentos asociados a una persona.
     \item Se podrán dar de alta y de baja a los residentes más de una vez. Se considera un alta cuando entran a residir en la fundación y una baja cuando la abandonan.
-    \item La información de cada uno de los residentes se seguirá almacenando en el sistema aunque se le haya dado de baja de la fundación, a no ser que un administrador decida eliminar a la persona del sistema. 
+    \item La información de cada uno de los residentes se seguirá almacenando en el sistema aunque se le haya dado de baja de la fundación, con la excepción de que un administrador decida eliminar a esa persona del sistema. 
     \item Los usuarios con el rol de administrador podrán:
     \begin{itemize}
         \item Añadir y eliminar personas del sistema.
@@ -56,7 +56,7 @@
     \item Se contemplarán búsquedas mixtas e individuales, es decir, búsquedas dentro de un tipo de persona concreto, o búsquedas de cualquier tipo de persona sobre campos coincidentes (búsqueda por nombre, ocupación etc.).
     \item Los documentos asociados a las personas serán de tipo imagen o documento de texto (pdf, doc, odt).
     \item A la hora de añadir una fotografía desde la aplicación, se proporcionará una cámara nativa además de incluir la opción de agregarla desde la galería de imágenes del smartphone.
-    \item La aplicación tendrá un apartado dedicado a mostrar estadísticas sobre:
+    \item \label{rf-es-personas} La aplicación tendrá un apartado dedicado a mostrar estadísticas sobre:
         \begin{itemize}
             \item Número de residentes totales de la fundación.
             \item Número de residentes filtrados por género.
@@ -104,7 +104,7 @@
         \end{enumerate}
     \item Los usuarios con el rol de invitados solo podrán ver quien ocupa cada casa/habitación.
     \item Los usuarios con el rol de participante no podrán acceder a la sección de alojamientos.
-    \item Las estadísticas que debe cubrir la aplicación sobre los alojamientos serán:
+    \item \label{rf-es-ocupacion} Las estadísticas que debe cubrir la aplicación sobre los alojamientos serán:
         \begin{itemize}
             \item Porcentaje de ocupación actual de las casas.
             \item Número de plazas libre sobre el total.
@@ -123,12 +123,14 @@
             \item Eliminar actividades.
             \item Ver actividades disponibles.
             \item Ver la información de cualquier actividad.
+            \item Puntuar a los asistentes de una actividad.
         \end{itemize}
     \item Los usuarios con el rol estándar podrán:
         \begin{itemize}
             \item Añadir nuevas actividades.
             \item Ver actividades disponibles.
             \item Ver la información de cualquier actividad.
+            \item Puntuar a los asistentes de una actividad.
         \end{itemize}
     \item Los usuarios con el rol de asistente podrán:
         \begin{itemize}
@@ -136,6 +138,21 @@
             \item Desapuntarse de actividades.
             \item Ver actividades disponibles.
             \item Ver la información de cualquier actividad.
+            \item Ver las estadísticas de su participación en actividades, así como el ranking con respecto a otros participantes.
+        \end{itemize}
+    \item Las estadísticas que cubrirá la aplicación para cada individuo será:
+        \begin{itemize}
+            \item Actividades realizadas
+            \item Puntuación media de las actividades
+            \item Puntuación individual en cada una de las actividades realizada.
+        \end{itemize}
+    \item Existirá un ranking de usuarios en base a la puntuación total de todas las actividades realizadas por cada uno de los usuarios.
+    \item Existirán diferentes divisiones en base a la puntuación de cada usuario:
+        \begin{itemize}
+            \item Bronce: Menos de 10 puntos.
+            \item Plata: Entre 10 y 50 puntos.
+            \item Oro: Entre 50 y 150 puntos.
+            \item Platino: Más de 150 puntos.
         \end{itemize}
 
 \end{enumerate}
@@ -144,6 +161,7 @@
 
 \begin{enumerate}[start=1,label={RNF-\arabic*.}]
     \item La aplicación debe estar desarrollada tanto para Android como para IOS.
+    \item Todos los usuarios, menos los del rol de invitado, estarán asociados a un residente.
     \item Todos los datos se transmitirán y almacenarán de forma segura, evitando así exponer información delicada.
     \item Los datos de carácter sensible no se almacenarán nunca en el dispositivo del usuario.
     \item Todo el sistema tendrá que cumplir con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.
@@ -178,9 +196,10 @@
             \item Un valor identificativo del estado de su documentación española
             \item Un valor identificativo del estado de su empadronamiento en caso de que esté residiendo en ese momento
             \item Un valor identificativo del estado de su tarjeta sanitaria
+            \item Residente de la fundación del que es hijo o hija
+            \item Residente de la fundación del que es padre o madre
+            \item Colectivos a los que pertenecen
         \end{itemize}
-    \item Los residentes podrán tener una relación hijo/a-padre/madre entre ellos
-    \item Los residentes podrán pertenecer a colectivos.
     \item Los datos asociados de los voluntarios serán:
         \begin{itemize}
             \item Nombre y apellidos
@@ -254,14 +273,11 @@
         \begin{itemize}
             \item Nombre
             \item Foto de la actividad
-            \item Persona que realiza la actividad
             \item Descripción
             \item Fecha
+            \item Asistentes de una actividad
+            \item Puntuación de los asistentes a la actividad
         \end{itemize}
-    \item Se almacenará información básica acerca de las personas que realizan las actividades:
-        \begin{itemize}
-            \item Nombre
-            \item Descripción (cualidades, ...)
-            \item Cargo actual (en caso de ser relevante para las actividades que tutoriza)
-        \end{itemize}
+    \item La puntuación de un residente en una actividad será de un mínimo de 0 y un máximo de 10.
+
 \end{enumerate}
