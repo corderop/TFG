@@ -14,7 +14,7 @@
     \item Los usuarios con el rol de administrador serán los únicos que podrán crear, modificar y eliminar a otros usuarios, así como modificar sus roles.
     \item Los usuarios con el rol de invitado podrán tener restringido el acceso a cualquiera de las secciones.
     \item Los usuarios con el rol de participante solo tendrán acceso a la sección de actividades.
-    \item El sistema contemplará una opción de exportación de los datos de personas, de ocupación y de participación en actividades, a diferentes formatos (csv y excel).
+    \item El sistema contemplará una opción de exportación de los datos de personas y de ocupación, a diferentes formatos (csv y excel).
     \item Las estadísticas (\ref{rf-es-personas}, \ref{rf-es-ocupacion}) podrán mostrarse de forma total o filtradas por periodos de tiempo (semanas, meses, años...).
 
 \end{enumerate}
@@ -78,7 +78,10 @@
             \item Se almacenarán citas importantes asociadas a cada uno de los residentes.
             \item Se notificará a través de la aplicación a los usuarios con los roles de administrador y estándar un día antes de la cita y el mismo día de esta.
             \item Se notificará a por email al residente un día antes de la cita y el mismo día de esta.
+            \item Los usuarios con los roles de administrador y estándar podrán ver las próximas citas.
         \end{itemize}
+    \item Los datos de las personas se exportarán en tres archivos diferentes, uno por cada tipo de persona (residentes, voluntarios, colaboradores y socios)
+    \item Para cada persona se exportarán todos los datos almacenados de estos.
 
 \end{enumerate}
 
@@ -111,6 +114,7 @@
             \item Número de plazas libres sobre el total.
             \item Número de casas con alguna plaza libre.
         \end{itemize}    
+    \item Los datos a exportar serán todos los asociados a cada casa, junto con las personas que las ocupan.
 
 \end{enumerate}
 
@@ -261,6 +265,7 @@
 \begin{enumerate}[start=15,label={RNF-\arabic*.}]
 
     \item Cada casa estará identificada por una letra única en base a las demás casas. En caso de tener más casas de las letras disponibles, se comenzarán a usar combinaciones de dos letras.
+    \item Cada casa tendrá un nombre asociado.
     \item Cada habitación estará identificada por un número único en base a las demás habitaciones dentro de la misma casa.
     \item Cada habitación tendrá un número de plazas y una ocupación (residentes actuales).
 

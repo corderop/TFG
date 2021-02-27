@@ -1,0 +1,3 @@
+# Estándar de commits a seguir
+
+Para el estandar de commits voy a seguir los especificados en [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Al no tener una estrucutra de código, los types serán las secciones que se han editado (requisitos, objetivos, portada...) y `docs` o `test` según corresponda. Además se hará uso de [gitmojis](https://gitmoji.dev) para hacer más claros los commits.
