@@ -1,0 +1,22 @@
+\section{Elección tecnológica}
+
+\subsection{Desarrollo móvil}
+
+Uno de los requisitos que se contemplan en el proyecto, especifica que la aplicación debe estar desarrollada tanto para Android como para IOS (\ref{rnf-plataformas}). Este condiciona la elección de las tecnologías a utilizar para el desarrollo de la aplicación móvil. Actualmente para el desarrollo de aplicaciones móviles existen dos alternativas: las aplicaciones nativas y las aplicaciones denominadas como \textit{cross-platform}.
+
+Las aplicaciones nativas, son las desarrolladas con las herramientas proporcionadas por las diferentes plataformas. Para Android tenemos Android SDK \cite{android-sdk}, con las que podemos desarrollar aplicaciones Android con Java, Klotin y C++. Para dispositivos de Apple tenemos IOS SDK \cite{ios-sdk}, las cuales nos permiten desarrollar en Objective-C y Swift. 
+
+Por otro lado, las aplicaciones \textit{cross-platform} son aplicaciones que bajo un mismo desarrollo pueden funcionar en ambas plataformas. En el artículo \cite{cross-platform-comparacion} los autores nos presentan 5 tipos de apps según las herramientas utilizadas, a su vez divididas en dos grandes grupos:
+
+\begin{itemize}
+    \item \textbf{(Progressive) Web Apps:} Aplicaciones desarrolladas con tecnologías web (HTML, CSS y JavaScript). Estas aplicaciones no son instalables, simplemente se utilizan desde el navegador.
+    \item \textbf{Aplicaciones híbridas:} Son parecidas a las anteriores. La principal diferencia con las anteriores es que son instalables como una aplicación nativa. Esto lo hacen integrando un renderizador de webs en la propia aplicación. 
+    \item \textbf{Runtime-based and Interpreted apps:} Esta alternativa se acerca más a las aplicaciones nativas. Consiste en la realización de aplicaciones utilizando una interfaz que transforma una aplicación desarrollada con una misma herramienta para ambas plataformas, en una aplicación nativa en cada una de estas. 
+    \item \textbf{Model-driven software development:} Esto está dirigido a realizas aplicaciones con un nivel de abstracción más alto, evitando el desarrollo de código fuente.
+    \item \textbf{Compilation-based:} Genera aplicaciones parecidas a las interpretadas, con la diferencia de que el renderizado de elementos es realizado por un motor gráfico ajeno a la interfaz proporcionada por la tecnología de desarrollo.
+\end{itemize}
+
+Los puntos a determinar para tener en cuenta que herramienta utilizar deben estar claros antes de comenzar a comparar. Lo más importante será el tiempo de desarrollo. Con un tiempo limitado para un solo desarrollador, lo mejor será que las tecnologías a usar no impliquen un alto tiempo de aprendizaje, además de una tiempo de desarrollo razonable. Por otra parte, teniendo en cuenta las alternativas "no nativas", el rendimiento será un factor importante en estas. Aun sin ser una aplicación demasiado exigente computacionalmente hablando, es importante que proporcione una sensación de fluidez correcta. Por último, durante las reuniones, los clientes en varias ocasiones han mencionado que su prioridad es la aplicación móvil pero que, en un futuro, les gustaría tener una aplicación web o de escritorio que les permitiese también trabajar desde el ordenador. Debido a esto, será interesante analizar la posibilidad de adaptación de la aplicación a otros dispositivos, mediante la reutilización de parte de su código.
+
+\subsection{Base de datos}
+
