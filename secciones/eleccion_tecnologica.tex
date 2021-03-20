@@ -18,11 +18,19 @@ Entre ambas la mejor elección en este caso será React-Native. Principalmente, 
 
 \subsection{Base de datos}
 
-Últimamente se han popularizado muchas alternativas a las base de datos relacionales. La alternativas NoSQL proporcionan una variedad de bases de datos con diferentes formas de almacenar y estructurar los datos. 
+Últimamente se han popularizado muchas alternativas a las base de datos relacionales. La mayoría de ellas se engloban en el grupo popularmente conocido como NoSQL. Son agrupadas de esta forma debido a que muchas de ellas comparten diferencias con las relacionales. 
 
-Analizando la naturaleza de los datos que vamos a tratar, estos seguirán una estructura claramente relacional. Las diferentes secciones de la aplicación estarán relacionadas entre sí, por ejemplo, las personas almacenadas en el sistema participarán en actividades o habitarán las casas. Esta clara estructuración de los datos ofrece una ventaja ante bases de datos conocidas como \textit{key-value} o basadas en documentos, la cuales son algunas de las alternativas NoSQL más conocidas. En este caso, no será necesaria la flexibilidad de estructuración y tipos que estas ofrecen. 
+Ambos tipos de bases de datos tienen ciertas ventajas e inconvenientes. En la mayoría de los casos estas diferencias vienen dadas por como están estrucutrados los datos y las propiedades que estas garantizan.
 
-A todo esto se suma que mi conocimiento y experiencia en diseñar y desarrollar bases de datos relacionales es mucho mayor en comparación a otros tipos de bases de datos.
+Una de las propiedades clave en nuestro caso será la validez de los datos introducidos. Es clave que al introducir datos estos se inserten sin errores y no dejen a esta en un estado inválido. Necesitamos que la alternativa escogida respete las propiedades ACID. Esta es una de las principales ``desventajas'' de las alternativas NoSQL.  ``Normalmente estas no soportan las transiciones ACID porporcionadas por las bases de datos relacionales'' \cite{NoSQLvsSQL_1}. Esto nos da una primera pista de que muchas de estas alternativas pueden no ser válidas en este proyecto.
+
+Para tomar la decisión final será necesario analizar algunas de las alternativas NoSQL más utilizadas en estos ámbitos. Las bases de datos \textbf{key-value} son una de ellas. Básicamente siguen una estructura en la que los datos están asociados a una clave única. Estas permiten accesos e insecciones rápidas y ofrecen una mayor flexbilidad en los datos a almacenar. Por otra parte la estructura es muy simple y carece de relaciones, algo fundamental en nuestro caso, lo que nos lleva a descartar esta opción.
+
+A partir de esta alternativa surgen las bases de datos \textbf{basadas en documentos}. Estas tienen la misma estructura que las \textit{key-value}, con la diferencia de que utilizan metadatos asociados a los documentos y permiten obtener estos, no solo en base a su clave única, si no también en base a su contenido. Estas proporcionan una mayor flexibilidad que las relacionales, permitiendo que los documentos no tengan que seguir una estrucutra fija como ocurre con las tablas en las relacionales. En este caso, no necesitamos esta flexibilidad ya que los datos a almacenar han sido claramente predefinidos con el cliente. Por otra parte, ``las bases de datos orientadas a documentos deben ser evitadas si la base de datos requiere de muchas relaciones'' \cite{NoSQLvsSQL_2}, lo que en nuesto caso hará que nos decantemos de nuevo por las relacionales.
+
+Otras bases de datos NoSQL muy utilizadas, son las bases de datos basadas en grafos. Estas ponen el foco en las relaciones aunque internamente estén implementadas bajo alternativas anteriormente mencionadas. En nuestro caso, no tiene sentido modelar la información bajo un grafo ya que las relaciones, aun siendo importantes, no tienen el foco principal, sobretodo a la hora de acceder a la información.
+
+Hay bastante más alternativas NoSQL, pero en su mayoría tienen como foco el BigData o la ingeniería de datos, por lo que no nos serán interesantes aquí. Una base de datos relacional nos proporcionará la robustez y funcionalidades necesarias en este caso, siendo la mejor alternativa a utilizar.
 
 \subsection{Desarrollo backend}
 
