@@ -34,4 +34,39 @@ Hay bastante más alternativas NoSQL, pero en su mayoría tienen como foco el Bi
 
 \subsection{Desarrollo backend}
 
-% Para el desarrollo backend, casi cualquier alternativa es válida para lo que se necesita. Existen alternativas casi infinitas para el desarrollo del servidor. Una de las más populares actualmente es Node.JS. Esta podrá proporcionar una estructura \textit{Full-JavaScript} al proyecto que provocará una mayor estandarización del código, además de que reducirá la necesidad de aprendizaje de cualquier otra tecnología, debido al conocimiento y uso previo de esta por mi. Además, esta tecnología será compatible con la mayoría de servicios serverless actuales, que podrán ser una alternativa tenida en cuenta a la hora de alojar el proyecto en base a reducir la necesidad de mantenimiento por parte de la organización. 
+Para el desarrollo de backend existe múltiples alternativas. Existen varias tecnologías y frameworks que nos permitirán aplicar la arquitectura diseñada. Múltiples frameworks nos serían útiles para realizar una API que nos permitiese hacer de vista en nuestro sistema. Algunos ejemplos son Flask con Python, Laravel para PHP o Express para Node.JS. 
+
+En este caso, no necesitamos implementar funcionalidades que nos liguen a una tecnología concreta, lo que no da más flexibilidad a la hora de elegir. Nos interesa decidir una herramienta que facilite el desarrollo y lo agilice. Para esto lo más sensato es basarse en el nivel del desarrollador en cada una de ellas. En general, los conocimientos en Javascript son mayores que en cualquier otro lenguaje.
+
+Analizando aspectos más técnicos, en \cite{Crawford2017ACO} hacen una comparación exhaustiva de las diferentes tecnologías más populares de backend, analizando desde la popularidad de estas, hasta el rendimiento que ofrecen. Estos resultados se ven reflejados en La tabla \ref{fig:comparison}.
+
+\begin{table}
+    \label{fig:comparison}
+    \centering
+    \begin{tabular}{|l|c|c|c|c|} 
+    \hline
+    \rowcolor[rgb]{0.949,0.949,0.949}                                                                                                                                                                             & \textbf{Node JS} & \textbf{PHP} & \textbf{Django} & \textbf{Rails}  \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Getting}\\\textbf{started}\\\textbf{}\end{tabular}                                                & Very Good        & Excelent     & Very Good       & Good            \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Help And }\\\textbf{Support}\\\textbf{}\end{tabular}                                              & Good             & Excelent     & Excelent        & Excelent        \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Popularity}\\\textbf{}\end{tabular}                                                               & Very Good        & Excelent     & Fair            & Very Good       \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Development }\\\textbf{tools and }\\\textbf{package}\\\textbf{management}\\\textbf{}\end{tabular} & Excelent         & Good         & Fair            & Very Good       \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Environments}\\\textbf{}\end{tabular}                                                             & Excelent         & Poor         & Good            & Good            \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Integration with }\\\textbf{databases}\\\textbf{}\end{tabular}                                    & Excelent         & Very Good    & Fair            & Very Good       \\ 
+    \hline
+    {\cellcolor[rgb]{0.949,0.949,0.949}}\begin{tabular}[c]{@{}>{\cellcolor[rgb]{0.949,0.949,0.949}}l@{}}\textbf{Performance}\\\textbf{}\end{tabular}                                                              & Excelent         & Fair         & Very Good       & Fair            \\
+    \hline
+    \end{tabular}
+    \caption{Tabla de comparación de tecnologías obtenida de \protect\cite{Crawford2017ACO}}
+\end{table}
+
+El estudio nos resume en ciertos ámbitos la capacidad de algunas de las alternativas más populares. En nuestro caso, no es interesante absolutamente todo lo que refleja la tabla. Por ejemplo, al utilizar tecnologías de bases de datos altamente estandarizadas, cualquiera de las herramientas a utilizar nos ofrecerá una correcta integración con estas. Por otra parte, el rendimiento no será una prioridad. Es cierto que puede reducir costes a la fundación a la hora de alojar el servidor, pero no supondrá al no estar dirigida la aplicación a un alto número de usuarios no es algo que deba preocupar en exceso. 
+
+En cuanto a los otros ámbitos, que sea una tecnología popular puede ayudar en un futuro a la asociación a buscar otros desarrolladores, para ampliar o adaptar la aplicación. Por otra parte, la ayuda y soporte, herramientas de desarrollo y ``environments'' tienen un mayor peso en la elección ya que pueden facilitar y agilizar el desarrollo. 
+
+Teniendo en cuenta todo esto, creo que la mejor elección será Node.JS. Este facilitará en gran medida el desarrollo debido a que el desarrollo completo del sistema, tanto aplicación como backend, se haría con Javascript. Esto aumentará la compatibilidad e integración entre ambos servicios. Por otra parte al ser una herramienta popular, no será tan difícil encontrar desarrolladores para colaborar en futuros proyectos que puedan surgir. A todo esto se suma, que el conocimiento del equipo de desarrollo es mayor en esta tecnología, lo que reducirá el tiempo de aprendizaje, el cual sería mayor en incluso podría lastrar el proceso de desarrollo con otras tecnologías.
