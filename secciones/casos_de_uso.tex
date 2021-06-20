@@ -1,7 +1,12 @@
 \section{Casos de uso}
 
+\subsection{Actores del sistema}
 
-\begin{table}[ht!]
+Tras las reuniones con los clientes, se determinaron los perfiles de personas que iban a utilizar el sistema y se plasmaron en los requisitos. Estos usarán el sistema en forma de usuarios y representados por diferentes roles.
+
+Dentro que se han determinado las posibles acciones dentro de cada rol, para clarificar cada tipo de usuario, se definirán estos como los actores que hacen uso del sistema. A parte de estos, no se consideran otros actores externos de forma relevante para explicarlos en forma de tabla. Son los siguientes: 
+
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{|l|l|l|} 
@@ -35,7 +40,7 @@
     \caption{Descripción del usuario administrador}
 \end{table}
 
-\begin{table}[ht!]
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{|l|l|l|} 
@@ -69,7 +74,41 @@
     \caption{Descripción del usuario general}
 \end{table}
 
-\begin{table}[ht!]
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|l|c|} 
+            \hline
+            \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Actor}            & Usuario participante                                                                                                                                             & ACT\_4         \\ 
+            \hline
+            \textbf{Descripción}                                        & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Usuario con privilegios de acceso solo a la sección de \\actividades\end{tabular}}                                                 \\ 
+            \hline
+            \textbf{Características}                                    & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Está destinado a residentes de la fundación que participan\\en los talleres realizados por esta.\end{tabular}}                     \\ 
+            \hline
+            \textbf{Relaciones}                                         & \multicolumn{2}{l|}{}                                                                                                                                                             \\ 
+            \hline
+            \textbf{Referencias}                                        & \multicolumn{2}{l|}{\textit{(Añadir elementos en los que interviene)}}                                                                                                            \\ 
+            \hline
+            \multicolumn{3}{l}{}                                                                                                                                                                                                                            \\ 
+            \hline
+            \multicolumn{3}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Atributos}}                                                                                                                                                                    \\ 
+            \hline
+            \textbf{Nombre}                                             & \textbf{Descripción}                                                                                                                                             & \textbf{Tipo}  \\ 
+            \hline
+            Persona asociada                                            & \begin{tabular}[c]{@{}l@{}}Se almacenará la persona asociada. Esta será\\estrictamente necesaria en caso de que se \\quiera apuntar en actividades.\end{tabular} & Persona        \\ 
+            \hline
+            Nombre                                                      & Nombre de la persona                                                                                                                                             & String         \\ 
+            \hline
+            Contraseña                                                  & Contraseña del usuario                                                                                                                                           & String         \\ 
+            \hline
+            \begin{tabular}[c]{@{}l@{}}Nombre de \\usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}Nombre de usuario identificativo utilizado para\\iniciar sesión\end{tabular}                                                          & String         \\
+            \hline
+        \end{tabular}
+    }
+    \caption{Descripción del usuario participante}
+\end{table}
+
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{|l|l|l|} 
@@ -111,122 +150,27 @@
     \caption{Descripción del usuario invitado}
 \end{table}
 
-\begin{table}[ht!]
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|c|} 
-            \hline
-            \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Actor}            & Usuario participante                                                                                                                                             & ACT\_4         \\ 
-            \hline
-            \textbf{Descripción}                                        & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Usuario con privilegios de acceso solo a la sección de \\actividades\end{tabular}}                                                 \\ 
-            \hline
-            \textbf{Características}                                    & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}Está destinado a residentes de la fundación que participan\\en los talleres realizados por esta.\end{tabular}}                     \\ 
-            \hline
-            \textbf{Relaciones}                                         & \multicolumn{2}{l|}{}                                                                                                                                                             \\ 
-            \hline
-            \textbf{Referencias}                                        & \multicolumn{2}{l|}{\textit{(Añadir elementos en los que interviene)}}                                                                                                            \\ 
-            \hline
-            \multicolumn{3}{l}{}                                                                                                                                                                                                                            \\ 
-            \hline
-            \multicolumn{3}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Atributos}}                                                                                                                                                                    \\ 
-            \hline
-            \textbf{Nombre}                                             & \textbf{Descripción}                                                                                                                                             & \textbf{Tipo}  \\ 
-            \hline
-            Persona asociada                                            & \begin{tabular}[c]{@{}l@{}}Se almacenará la persona asociada. Esta será\\estrictamente necesaria en caso de que se \\quiera apuntar en actividades.\end{tabular} & Persona        \\ 
-            \hline
-            Nombre                                                      & Nombre de la persona                                                                                                                                             & String         \\ 
-            \hline
-            Contraseña                                                  & Contraseña del usuario                                                                                                                                           & String         \\ 
-            \hline
-            \begin{tabular}[c]{@{}l@{}}Nombre de \\usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}Nombre de usuario identificativo utilizado para\\iniciar sesión\end{tabular}                                                          & String         \\
-            \hline
-        \end{tabular}
-    }
-    \caption{Descripción del usuario participante}
-\end{table}
-
 \subsection{Usuarios}
 
-\begin{table}
+El sistema estará planteado de forma que solo el usuario administrador pueda gestionar los usuarios del sistema. Es por esto, que este tipo de usuarios estén dirigidos a personas con un mayor nivel de responsabilidad en la fundación. El resto de usuarios, solo podrán loguearse en el sistema, es decir, solicitar permisos de acceso a este para poder acceder a los recursos pertinentes y desloguearse, buscando que el sistema invalide los mecanismos de acceso a la información para este usuario.
+
+El diagrama de casos de uso que representa estas acciones viene representado en la Figura \ref{fig:cu_usuarios}. En esta se puede ver como el actor referente a los usuarios administradores gestionan a los usuarios, mientras que todos los demás solo tienen acceso a métodos de login y logout. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diseno/sistema/CU/usuarios.png}
+    \caption{Diagrama de casos de uso referente a la gestión de usuarios}
+    \label{fig:cu_usuarios}
+\end{figure}
+
+Dentro de la gestión de usuarios, el caso de uso a destacar, por tener un flujo de funcionamiento diferente a los demás y alejado de operaciones simples sobre datos, será el de login. Para entender mejor la idea de este, se ha desarrollado una descripción este en la Tabla \ref{fig:cu_usuarios_login}.
+
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Consultar información de un usuario} & CU\_01  \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1 (\textit{Usuario administrador})}       \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                      \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                       \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{El usuario debe existir en el sistema}         \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{}                                              \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}                  & 1.0     \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                        \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir que se pueda acceder a toda la información de un usuario.}                                    \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                        \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                  \\ 
-        \hline
-        \multicolumn{4}{|l|}{Se accede a toda la información de un usuario ajeno, salvo su contraseña.~ }                           \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 1: Consultar información de un usuario}
-\end{table}
-
-
-\begin{table}
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Editar usuario}     & CU\_02                                                                                                               \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1 (\textit{Usuario administrador})}                                                                                                   \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                                                  \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                                                   \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se debe conocer la información del usuario}                                                                                                \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{La información del usuario habrá sido modificada}                                                                                          \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión} & 1.0                                                                                                                  \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                                    \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                                                            \\ 
-        \hline
-        \multicolumn{4}{|l|}{Modificar la información de un usuario existente en el sistema. }                                                                                                                                  \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                                    \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                                                              \\ 
-        \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Un usuario con los debidos permisos podrá modificar la información de otro.\\Para esto tendrá que ser conocedor de la información de este previamente.\end{tabular}}    \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 2: Editar usuario}
-\end{table}
-
-
-\begin{table}
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Login}              & CU\_03                                                                                                                                        \\ 
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Login}              & CU\_01                                                                                                                                        \\ 
         \hline
         \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2, ACT\_3, ACT\_4}                                                                                                                                     \\ 
         \hline
@@ -254,54 +198,62 @@
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 3: Login}
+    \caption{Caso de uso 1: Login}
+    \label{fig:cu_usuarios_login}
 \end{table}
 
-\subsection{Personas}
 
-
-\begin{table}
+\begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Consultar información de una persona} & CU\_04                                                                                           \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                   \\ 
         \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2, ACT\_3\textit{}}                                                                                                 \\ 
+        \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                             & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                            \\ 
         \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                                        \\ 
+        1  & \begin{tabular}[c]{@{}l@{}}El usuario envía su usuario y\\contraseña\end{tabular}                    & 2 & \begin{tabular}[c]{@{}l@{}}El sistema comprueba que el usuario \\existe y que la contraseña es correcta\end{tabular}  \\ 
         \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                                         \\ 
+        &                                                                                                      & 3 & \begin{tabular}[c]{@{}l@{}}El sistema envía un método de\\identificación al usuario\end{tabular}                      \\ 
         \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{La persona debe existir en el sistema}                                                                                           \\ 
+        4  & \begin{tabular}[c]{@{}l@{}}El usuario recibe el método de\\identificación y lo almacena\end{tabular} &   &                                                                                                                       \\ 
         \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{}                                                                                                                                \\ 
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                  \\ 
         \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}           & 1.0                                                                                              \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Alterno (secundario) de eventos}}                                                                                                                              \\ 
         \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                          \\ 
+        3a & \multicolumn{3}{l|}{ El usuario no existe en el sistema o la contraseña es incorrecta }                                                                                                                                          \\ 
         \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                                                  \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir que se pueda acceder a toda la información de una persona.~~~~~~~ }                                                                                                             \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                          \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                                                    \\ 
-        \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se accede a toda la información de una persona de la fundación, \\independientemente del tipo (Residente, Socio, Colaborador o Voluntario)\\\end{tabular}}    \\
+        & \multicolumn{3}{l|}{1. El sistema notifica al usuario de que el acceso es incorrecto}                                                                                                                                            \\
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 4: Consulta información de una persona}
+    \caption{Curso de eventos del caso de uso 1}
 \end{table}
 
-\begin{table}
+\newpage
+
+\subsection{Personas}
+
+En la gestión de todo lo referente a las personas, habrá mas operaciones. En este, no solo el usuario administrador tendrá el protagonismo, sin no que también participarán los usuarios generales e invitados si tienen los respectivos permisos.
+
+Aquí no solo entran los datos directos de las personas, si no también la gestión de sus documentos, citas, y su estado actual, si es de alta o de baja. El diagrama de casos de uso referente a esta sección está representado en la Figura \ref{fig:cu_personas}. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diseno/sistema/CU/personas.png}
+    \caption{Diagrama de casos de uso referente a la gestión de personas}
+    \label{fig:cu_personas}
+\end{figure}
+
+Dentro de los casos de usos representados, el que más dudas puede generar será el de dar de alta o de baja a las personas. El dar de baja es algo confuso, y puede verse relacionado con el eliminar una personas del sistema. Las plantillas de estos casos de uso (Tablas \ref{fig:cu_personas_altabaja} y \ref{fig:cu_personas_eliminar}) clarifican el funcionamiento que se busca en estos.
+
+\begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Eliminar persona}   & CU\_05                                                                                                      \\ 
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Eliminar persona}   & CU\_02                                                                                                      \\ 
         \hline
         \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1\textit{}}                                                                                                                  \\ 
         \hline
@@ -329,16 +281,50 @@
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 5: Eliminar una persona}
+    \caption{Caso de uso 2: Eliminar una persona}
+    \label{fig:cu_personas_eliminar}
 \end{table}
 
-
-\begin{table}
+\begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Dar de alta/baja una persona} & CU\_06                                                                                                                                                                                                                         \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                                                                             \\ 
+        \hline
+        \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                                         & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                                                                          \\ 
+        \hline
+        1  & \begin{tabular}[c]{@{}l@{}}El usuario solicita eliminar una\\persona del sistema\end{tabular}                    & 2 & \begin{tabular}[c]{@{}l@{}}El sistema comprueba que la persona\\existe en el sistema.\end{tabular}                                                                  \\ 
+        \hline
+        &                                                                                                                  & 3 & \begin{tabular}[c]{@{}l@{}}El sistema elimina al completo toda la\\información relacionada con la persona\\(documentos, fotografías, datos, citas...)\end{tabular}  \\ 
+        \hline
+        4  & \begin{tabular}[c]{@{}l@{}}El usuario recibe la confirmación\\de que se ha realizado\\correctamente\end{tabular} &   &                                                                                                                                                                     \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                            \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Alterno (secundario) de eventos}}                                                                                                                                                                                        \\ 
+        \hline
+        3a & \multicolumn{3}{l|}{La persona no existe en el sistema}                                                                                                                                                                                                                                    \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El sistema notifica al usuario de que la persona no existe}                                                                                                                                                                                                         \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                            \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Comentarios}}                                                                                                                                                                                                                  \\ 
+        \hline
+        \multicolumn{4}{|l|}{Se eliminará cualquier registro existente de la persona en el sistema}                                                                                                                                                                                                     \\
+        \hline
+        \end{tabular}
+    }
+    \caption{Curso de eventos del caso de uso 2}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|} 
+        \hline
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Dar de alta/baja una persona} & CU\_03                                                                                                                                                                                                                         \\ 
         \hline
         \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2\textit{}}                                                                                                                                                                                                                                       \\ 
         \hline
@@ -366,91 +352,146 @@
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 6: Dar de alta/baja una persona}
+    \caption{Caso de uso 3: Dar de alta/baja una persona}
+    \label{fig:cu_personas_altabaja}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|} 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                                                                               \\ 
+        \hline
+        \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                                         & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                                                                            \\ 
+        \hline
+        1  & \begin{tabular}[c]{@{}l@{}}El usuario solicita dar de alta~~~~ \\o baja a una persona\end{tabular}               & 2 & \begin{tabular}[c]{@{}l@{}}El sistema comprueba que la persona no\\tenga ya el estado que se le quiere dar\end{tabular}                                               \\ 
+        \hline
+        &                                                                                                                  & 3 & \begin{tabular}[c]{@{}l@{}}El sistema da de baja/alta a la persona\\eliminando únicamente su plaza de\\alojamiento\end{tabular}                                       \\ 
+        \hline
+        4  & \begin{tabular}[c]{@{}l@{}}El usuario recibe la confirmación\\de que se ha realizado\\correctamente\end{tabular} &   &                                                                                                                                                                       \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                              \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Alterno (secundario) de eventos}}                                                                                                                                                                                          \\ 
+        \hline
+        3a & \multicolumn{3}{l|}{La persona no existe en el sistema}                                                                                                                                                                                                                                      \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El sistema notifica al usuario de que la persona no existe}                                                                                                                                                                                                           \\ 
+        \hline
+        3b & \multicolumn{3}{l|}{La persona que se intenta dar de alta, actualmente está dada de alta}                                                                                                                                                                                                    \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El sistema notifica al usuario que la persona ya está dada de alta}                                                                                                                                                                                                   \\ 
+        \hline
+        3c & \multicolumn{3}{l|}{La persona que se intenta dar de baja, actualmente está dada de baja}                                                                                                                                                                                                    \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El sistema notifica al usuarios que la persona ya está dada de baja}                                                                                                                                                                                                  \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                              \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Comentarios}}                                                                                                                                                                                                                    \\ 
+        \hline
+        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}La persona no aparecerá como persona activa, pero sus datos permanecerán en\\el sistema almacenados. En caso de ser un residente, su plaza de alojamiento\\quedará vacía ya que se considerará que ya no reside en la fundación.\end{tabular}}    \\
+        \hline
+        \end{tabular}
+    }
+    \caption{Curso de eventos del caso de uso 3}
+\end{table}
+
+\newpage
 
 \subsection{Alojamientos}
 
+En la gestión de alojamientos, ocurre como con la gestión de personas, participan los usuarios con el rol de administrador, invitado y general. Esta gestión consistirá principalmente en la gestión de las propiedades del alojamiento junto con los residentes de cada una de las habitaciones. 
 
-\begin{table}
+Dentro de los casos de usos mostrados en el diagrama de casos de uso de la Figura \ref{fig:cu_alojamientos}, los más difíciles de entender pueden ser los referidos a la modificación de una habitación. Con el objetivo de explicar un poco mejor el funcionamiento de ambos, se han realizado la descripción correspondiente de cada uno de ellos en las tablas \ref{fig:cu_alojamientos_modificar} y \ref{fig:cu_alojamientos_modificarresidentes}. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diseno/sistema/CU/alojamiento.png}
+    \caption{Diagrama de casos de uso referente a la gestión de alojamientos}
+    \label{fig:cu_alojamientos}
+\end{figure}
+
+\begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Consultar información de un alojamiento} & CU\_07                                                           \\ 
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Modificar habitación} & CU\_04                                                                  \\ 
         \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2, ACT\_3}                                                                                 \\ 
+        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1}                                                                                         \\ 
         \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                               \\ 
+        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                       \\ 
         \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                \\ 
+        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                        \\ 
         \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{La casa debe existir en el sistema}                                                                     \\ 
+        \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se está modificando la casa}                                                                    \\ 
         \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}\\\end{tabular}}                                                             \\ 
+        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{La información de la habitación es modificada (junto con los residentes)}                       \\ 
         \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}                  & 1.0                                                              \\ 
+        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}   & 1.0                                                                     \\ 
         \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                 \\ 
+        \multicolumn{4}{l}{}                                                                                                                                                         \\ 
         \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                         \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                 \\ 
         \hline
-        \multicolumn{4}{|l|}{Permitir acceder a toda la información de un alojamientos.}                                                                                                     \\ 
+        \multicolumn{4}{|l|}{Permitir modificar la información de una habitación junto con su residentes}                                                                            \\ 
         \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                 \\ 
+        \multicolumn{4}{l}{}                                                                                                                                                         \\ 
         \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                           \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                   \\ 
         \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se accede a toda la información relacionada con la casa (plazas, ocupación,\\ habitaciones, personas que la ocupan)\end{tabular}}    \\
+        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se modifica toda la información relacionada con la habitación (plazas, ocupación,\\ personas que la ocupan)\end{tabular}}    \\
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 7: Consultar información de un alojamiento}
+    \caption{Caso de uso 4: Modificar habitación}
+    \label{fig:cu_alojamientos_modificar}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Modificar casa}     & CU\_08                                                                                                                            \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                                                                                                   \\ 
         \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1}                                                                                                                                                 \\ 
+        \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                                                         & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                                                                                \\ 
         \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                                                               \\ 
+        1  & \begin{tabular}[c]{@{}l@{}}El usuario envía la información\\referente a la habitación y las\\personas que la ocupan\end{tabular} & 2 & \begin{tabular}[c]{@{}l@{}}El sistema comprueba que existe la \\habitación, que tiene plazas disponibles\\y que existen los resientes que la\\van a habitar\end{tabular}  \\ 
         \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                                                                \\ 
+        &                                                                                                                                  & 3 & \begin{tabular}[c]{@{}l@{}}El sistema modifica la información de\\la habitación\end{tabular}                                                                              \\ 
         \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se conoce la información del alojamiento}                                                                                                               \\ 
+        4  & \begin{tabular}[c]{@{}l@{}}El usuario recibe la confirmación\\de que se ha realizado\\correctamente\end{tabular}                 &   &                                                                                                                                                                           \\ 
         \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}La información de la casa y de las habitaciones\\correspondientes son modificadas (junto con los\\residentes)\end{tabular}}  \\ 
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                                                  \\ 
         \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión} & 1.0                                                                                                                               \\ 
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Alterno (secundario) de eventos}}                                                                                                                                                                                                              \\ 
         \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                                                 \\ 
+        3a & \multicolumn{3}{l|}{La habitación no existe}                                                                                                                                                                                                                                                                     \\ 
         \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                                                                         \\ 
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                                 \\ 
         \hline
-        \multicolumn{4}{|l|}{Permitir modificar la información de una casa junto con su residentes~~~~~~~~~~~~ }                                                                                                                             \\ 
+        3b & \multicolumn{3}{l|}{La habitación contiene más residentes que plazas}                                                                                                                                                                                                                                            \\ 
         \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                                                                 \\ 
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                                 \\ 
         \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                                                                           \\ 
+        3c & \multicolumn{3}{l|}{Algún residente de los especificados no existe en el sistema}                                                                                                                                                                                                                                \\ 
         \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se modifica toda la información relacionada con la casa (plazas, ocupación,\\ habitaciones, personas que la ocupan)\end{tabular}}                                                    \\
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                                 \\ 
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 8: Modificar casa}
+    \caption{Curso de eventos del caso de uso 4}
 \end{table}
 
-
-\begin{table}
+\begin{table}[h!]
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Modificar habitación de residentes} & CU\_09                                                                    \\ 
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Modificar habitación de residentes} & CU\_05                                                                    \\ 
         \hline
         \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2}                                                                                                 \\ 
         \hline
@@ -478,92 +519,72 @@
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 9: Modificar habitación de residentes}
+    \caption{Caso de uso 5: Modificar habitación de residentes}
+    \label{fig:cu_alojamientos_modificarresidentes}
 \end{table}
+
+
+\begin{table}[h!]
+    \centering
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|} 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                                                                                   \\ 
+        \hline
+        \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                                         & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                                                                                \\ 
+        \hline
+        1  & \begin{tabular}[c]{@{}l@{}}El usuario envía la información\\de los residentes de la habitación\end{tabular}      & 2 & \begin{tabular}[c]{@{}l@{}}El sistema comprueba que existe la \\habitación, que tiene plazas disponibles\\y que existen los resientes que la\\van a habitar\end{tabular}  \\ 
+        \hline
+        &                                                                                                                  & 3 & \begin{tabular}[c]{@{}l@{}}El sistema modifica la información de\\la habitación\end{tabular}                                                                              \\ 
+        \hline
+        4  & \begin{tabular}[c]{@{}l@{}}El usuario recibe la confirmación\\de que se ha realizado\\correctamente\end{tabular} &   &                                                                                                                                                                           \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                                  \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Alterno (secundario) de eventos}}                                                                                                                                                                                              \\ 
+        \hline
+        3a & \multicolumn{3}{l|}{La habitación no existe}                                                                                                                                                                                                                                                     \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                 \\ 
+        \hline
+        3b & \multicolumn{3}{l|}{La habitación contiene más residentes que plazas}                                                                                                                                                                                                                            \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                 \\ 
+        \hline
+        3c & \multicolumn{3}{l|}{Algún residente de los especificados no existe en el sistema}                                                                                                                                                                                                                \\ 
+        \hline
+        & \multicolumn{3}{l|}{1. El usuario es notificado}                                                                                                                                                                                                                                                 \\ 
+        \hline
+        \multicolumn{4}{l}{}                                                                                                                                                                                                                                                                                  \\ 
+        \hline
+        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Comentarios}}                                                                                                                                                                                                                        \\ 
+        \hline
+        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}El usuario no podrá modificar la información ni capacidad de la habitación, solo\\sus residentes\end{tabular}}                                                                                                                                        \\
+        \hline
+        \end{tabular}
+    }
+    \caption{Curso de eventos del caso de uso 5}
+\end{table}
+
+\newpage
 
 \subsection{Actividades}
 
-\begin{table}
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Ver información de una actividad} & CU\_10                                                                          \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2, ACT\_3, ACT\_4}                                                                                     \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                           \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                            \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{La actividad existe en el sistema}                                                                                  \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{}                                                                                                                   \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}               & 1.0                                                                             \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                             \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                                     \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir acceder a la información de una actividad}                                                                                                                         \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                             \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                                       \\ 
-        \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se accede a toda la información relacionada con la actividad (información de\\la actividad, participantes, puntuación de estos)\end{tabular}}    \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 10: Ver información de una actividad}
-\end{table}
+Por último, en la parte de la aplicación referente a las actividades, podrán acceder todos los usuarios. Los casos de uso aquí son bastante básicos. Estos están representados en el diagrama de casos de uso de la Figura \ref{fig:cu_actividades}. Dentro de estos, lo único que puede generar dudas es como se calcular el ranking. Esto vendrá dado por el caso de uso referente a puntuar a los asistentes de una actividad. Aquí se calculará la información del usuario con respecto al ranking, para propiciar un futuro acceso más rápido a este. Este se ve reflejado en el caso de uso 6 (Figura \ref{fig:cu_actividades_puntuacion}).
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diseno/sistema/CU/actividades.png}
+    \caption{Diagrama de casos de uso referente a la gestión de actividades}
+    \label{fig:cu_actividades}
+\end{figure}
 
 \begin{table}
     \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{|l|l|l|l|} 
         \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Editar Actividad}   & CU\_11                                                \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2}                                                             \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                   \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                    \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se conoce la información de la actividad}                                   \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{La información de la actividad se ha modificado}                            \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión} & 1.0                                                   \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                     \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                             \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir modificar la información de la actividad, sin modificar sus asistentes}                                                    \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                     \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                               \\ 
-        \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se modifica la información relacionada con la actividad (nombre, fecha y\\descripción).\end{tabular}}    \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 11: Editar actividad}
-\end{table}
-
-
-
-\begin{table}
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Puntuar a los asistentes de una actividad} & CU\_12                                                                   \\ 
+        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Puntuar a los asistentes de una actividad} & CU\_06                                                                   \\ 
         \hline
         \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_1, ACT\_2}                                                                                                       \\ 
         \hline
@@ -591,78 +612,24 @@
         \hline
         \end{tabular}
     }
-    \caption{Caso de uso 12: Puntuar a los asistentes de una actividad}
-\end{table}
-
-
-\begin{table}
-    \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Apuntarse a una actividad} & CU\_13        \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_4}                                    \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                  \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                   \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se conoce la información de la actividad}  \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{}                                          \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}        & 1.0           \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                    \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                            \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir a un usuario apuntarse a una actividad~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ }         \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                    \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                              \\ 
-        \hline
-        \multicolumn{4}{|l|}{Se asocia a una persona con la actividad en calidad de participante.}                              \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 13: Apuntarse a una actividad}
+    \caption{Caso de uso 6: Puntuar a los asistentes de una actividad}
+    \label{fig:cu_actividades_puntuacion}
 \end{table}
 
 \begin{table}
     \centering
-    \resizebox{\textwidth}{!}{
-        \begin{tabular}{|l|l|l|l|} 
-        \hline
-        \rowcolor[rgb]{0.886,0.886,0.886} \textbf{Caso de uso} & \multicolumn{2}{l|}{Ver ranking y su puntuación} & CU\_14                                                                    \\ 
-        \hline
-        \textbf{Actores}                                       & \multicolumn{3}{l|}{ACT\_4}                                                                                                  \\ 
-        \hline
-        \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                \\ 
-        \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                 \\ 
-        \hline
-        \textbf{Precondición}                                  & \multicolumn{3}{l|}{}                                                                                                        \\ 
-        \hline
-        \textbf{Poscondición}                                  & \multicolumn{3}{l|}{}                                                                                                        \\ 
-        \hline
-        \textbf{Autor}                                         & Pablo Cordero Romero & \textbf{Versión}          & 1.0                                                                       \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                  \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Propósito}}                                                                                                          \\ 
-        \hline
-        \multicolumn{4}{|l|}{Permitir a un usuario ver su ranking con respecto a otros usuarios~~~~~~~~~~ }                                                                                   \\ 
-        \hline
-        \multicolumn{4}{l}{}                                                                                                                                                                  \\ 
-        \hline
-        \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Resumen}}                                                                                                            \\ 
-        \hline
-        \multicolumn{4}{|l|}{\begin{tabular}[c]{@{}l@{}}Se muestra a un usuario su posición en un ranking junto con la de otras \\personas, además de su puntuación y rango.\end{tabular}}    \\
-        \hline
-        \end{tabular}
-    }
-    \caption{Caso de uso 14: Ver ranking y su puntuación}
+    \begin{tabular}{|l|l|l|l|} 
+    \hline
+    \multicolumn{4}{|l|}{{\cellcolor[rgb]{0.886,0.886,0.886}}\textbf{Curso Normal (básico) de eventos}}                                                                                                                                                                        \\ 
+    \hline
+    \multicolumn{2}{|l|}{\textit{\textbf{Actor}}}                                                                                & \multicolumn{2}{l|}{\textit{\textbf{Sistema}}}                                                                                              \\ 
+    \hline
+    1 & \begin{tabular}[c]{@{}l@{}}El usuario envía la puntuación de\\los diferentes participantes de la\\actividad\end{tabular} & 2 & \begin{tabular}[c]{@{}l@{}}El sistema almacena la puntuación de \\los participantes de la actividad\end{tabular}                        \\ 
+    \hline
+      &                                                                                                                          & 3 & \begin{tabular}[c]{@{}l@{}}El sistema modifica la información\\referente al ranking, en función al \\cambio de puntuación\end{tabular}  \\ 
+    \hline
+    4 & \begin{tabular}[c]{@{}l@{}}El usuario recibe la confirmación\\de que se ha realizado\\correctamente\end{tabular}         &   &                                                                                                                                         \\
+    \hline
+    \end{tabular}
+    \caption{Curso de eventos del caso de uso 6}
 \end{table}
