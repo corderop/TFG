@@ -53,32 +53,28 @@ Una vez basándome en estos diseños y en los estilos especificados en el Moodbo
     \minipage{0.30\textwidth}
         % \centering
         \includegraphics[width=\linewidth]{diseno/app/presentacion/secciones.png}
-        \caption{Secciones de una pantalla principal}
-        \label{fig:secciones-principal}
     \endminipage\hfill
     \minipage{0.30\textwidth}
         \centering
         \includegraphics[width=\linewidth]{diseno/app/presentacion/secciones-elemento.png}
-        \caption{Secciones para un elemento}
-        \label{fig:secciones-elemento}
     \endminipage\hfill
     \minipage{0.30\textwidth}
         \centering
         \includegraphics[width=\linewidth]{diseno/app/presentacion/secciones-popup.png}
-        \caption{Secciones de una pantalla popup}
-        \label{fig:secciones-popup}
     \endminipage
+    \caption{ Secciones de comunes en las pantallas. De izquierda a derecha: página principal, pantalla de un elemento, pantalla de popup }
+    \label{fig:secciones}
 \end{figure}
 
-Muchos de las pantallas comparten componentes, lo que hace que la aplicación parta de varios diseños únicos y que a partir de ahí cada pantalla añada sus propio contenido. Todas las pantallas principales (como la que se ve en la Figura \ref{fig:secciones-principal}) tendrán un \textit{barra de navegación} inferior en la que se podrá navegar a través de las diferentes secciones de la app. Por otra parte, otro componente que compartirán muchas pantallas será el título. Este ofrecerá información acerca de la pantalla que se visita, así como una acción opcional a realizar. Por otra parte, según la pantalla podrían aparecer selectores de contenido así como una barra de búsqueda. El espacio restante lo ocupará el contenido.      
+Muchos de las pantallas comparten componentes, lo que hace que la aplicación parta de varios diseños únicos y que a partir de ahí cada pantalla añada sus propio contenido. Todas las pantallas principales (como la que se ve en la Figura \ref{fig:secciones} (izquierda)) tendrán un \textit{barra de navegación} inferior en la que se podrá navegar a través de las diferentes secciones de la app. Por otra parte, otro componente que compartirán muchas pantallas será el título. Este ofrecerá información acerca de la pantalla que se visita, así como una acción opcional a realizar. Por otra parte, según la pantalla podrían aparecer selectores de contenido así como una barra de búsqueda. El espacio restante lo ocupará el contenido.      
 
-Por otra parte, en pantallas que representan a un elemento en específico (como la que se ve en la Figura \ref{fig:secciones-elemento}) ya sea un alojamiento, actividad o personas, el diseño cambiará. Se perderá la barra de navegación inferior, a la cual se podrá acceder volviendo a la pantalla anterior. La página en este caso se dividirá en una sección superior que nos aportará información acerca del elemento con el que estamos tratando, además de incluir acciones principales mediante botones. El resto de la pantalla será contenido asociado al elemento.
+Por otra parte, en pantallas que representan a un elemento en específico (como la que se ve en la Figura \ref{fig:secciones} (centro)) ya sea un alojamiento, actividad o personas, el diseño cambiará. Se perderá la barra de navegación inferior, a la cual se podrá acceder volviendo a la pantalla anterior. La página en este caso se dividirá en una sección superior que nos aportará información acerca del elemento con el que estamos tratando, además de incluir acciones principales mediante botones. El resto de la pantalla será contenido asociado al elemento.
 
-En tercer lugar, otra tipo de ``pantalla'' aparecerá como un ``popup'' (como se ve en la Figura \ref{fig:secciones-popup}) para confirmar o realizar alguna una acción. Este se dividirá en tres partes, el título, el contenido y los botones de acción.
+En tercer lugar, otra tipo de ``pantalla'' aparecerá como un ``popup'' (como se ve en la Figura \ref{fig:secciones} (derecha)) para confirmar o realizar alguna una acción. Este se dividirá en tres partes, el título, el contenido y los botones de acción.
 
-Los diseños al completo de todas las pantallas comprendidas son los siguientes:
+Los diseños finales de algunas de las pantallas son los mostrados en las figuras \ref{fig:dis-fin1} y \ref{fig:dis-fin2}.
 
-\begin{figure}[h!]
+\begin{figure}[hp!]
     \centering
     
     \includegraphics[width=0.30\linewidth]{diseno/app/Login.png}
@@ -87,11 +83,11 @@ Los diseños al completo de todas las pantallas comprendidas son los siguientes:
     \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Datos de persona.png}
 
-    \includegraphics[width=0.30\linewidth]{diseno/app/Al pulsar documento.png}
+    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir una persona.png}
     \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Al pulsar en añadir cita.png}
     \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Camara.png}
+    \includegraphics[width=0.30\linewidth]{diseno/app/Principal casas.png}
 
     \caption{Versión final de los diseños (1)}
     \label{fig:dis-fin1}
@@ -101,78 +97,20 @@ Los diseños al completo de todas las pantallas comprendidas son los siguientes:
 \begin{figure}[hp!]
     \centering
     
-    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir una persona.png}
+    \includegraphics[width=0.30\linewidth]{diseno/app/Principal estadísticas.png}
     \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal casas.png}
+    \includegraphics[width=0.30\linewidth]{diseno/app/Editar una habitación.png}
     \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Datos de una casa.png}
 
-    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir una casa.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Editar una casa.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Editar una habitación.png}
-
-    \caption{Versión final de los diseños (2)}
-    \label{fig:dis-fin2}
-
-\end{figure}
-
-\begin{figure}[hp!]
-    \centering
-    
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal actividades asistente.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal actividades pasadas asistente.png}
-    \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Principal actividades admin.png}
-
-    \includegraphics[width=0.30\linewidth]{diseno/app/Visión de una actividad de asistente.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Visión de una actividad finalizada de asistente.png}
     \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Visión de una actividad.png}
-
-    \caption{Versión final de los diseños (3)}
-    \label{fig:dis-fin3}
-
-\end{figure}
-
-\begin{figure}[hp!]
-    \centering
-    
-    \includegraphics[width=0.30\linewidth]{diseno/app/Puntuar a los asistentes.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir una actividad.png}
     \hspace{0.03\linewidth}
     \includegraphics[width=0.30\linewidth]{diseno/app/Ranking.png}
 
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal estadísticas.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal Otros.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Lista de usuarios.png}
-
-    \caption{Versión final de los diseños (4)}
-    \label{fig:dis-fin4}
-
-\end{figure}
-
-\begin{figure}[hp!]
-    \centering
-    
-    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir un usuario.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Añadir un usuario-1.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Buscar a una persona.png}
-
-    \includegraphics[width=0.30\linewidth]{diseno/app/Principal personas-1.png}
-    \hspace{0.03\linewidth}
-    \includegraphics[width=0.30\linewidth]{diseno/app/Citas.png}
-
-    \caption{Versión final de los diseños (5)}
-    \label{fig:dis-fin5}
+    \caption{Versión final de los diseños (2)}
+    \label{fig:dis-fin2}
 
 \end{figure}
 
