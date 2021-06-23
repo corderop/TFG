@@ -1,0 +1,51 @@
+\section{Aspectos generales del desarrollo}
+
+\subsection{Generalidades del desarollo}
+
+Para que el desarrollo fuese uniforme, antes de que este se comenzara, se establecieron diferentes estándares a seguir. Esto se decidieron buscando unificar el formato del código generado durante el proyecto. En primero lugar, las herramientas utilizadas para los diferentes aspectos, fueron las siguientes:
+
+\begin{itemize}
+    \item \textbf{Control de versiones}: Para el control de versiones se ha utilizado Git. Siendo la alternativa más popular en el mundo del desarrollo de software, permitió en el desarrollo controlar las diferentes versiones del código generado, así como el progreso de este. En cuanto al estándar seguido para la redacción de commits se usó el especificado por Conventional Commits \cite{standardgit}.
+    \item \textbf{Estilo de código}: Para el estilo de código generado se han seguido los estándares marcados por Javascript \cite{standardjs}.
+    \item \textbf{Herramientas de desarrollo}: Para el desarrollo móvil se ha utilizado la herramienta Expo que permite la ejecución y prueba del código en emuladores y dispositivos. Por otra parte, para la gestión de paquetes necesarios para el desarrollo, se ha usado NPM en el caso del backend y Yarn para el desarrollo móvil, ambos gestores de paquetes de Javascript. Para el alojamiento del código se han usado repostorios de Github y para el despliegue del código la plataforma de hosting Heroku.
+    \item \textbf{Testing de rutas de la API}: Para el testing de rutas de la API se ha utilizado el software de testing de Javascript Chai.js.
+\end{itemize}
+
+\subsection{Testeo del código}
+
+Para garantizar la integridad y consistencia de la información almacenada en el sistema, se ha implementado una serie de test unitarios que comprueban las restricciones y características de cada una de las rutas de la API implementada. Esto ha permitido garantizar durante el desarrollo, de que desarrollos de funcionalidades posteriores, no ``rompan'' las ya desarrolladas.
+
+\subsection{Integración y despliegue}
+
+Para facilitar el proceso de desarrollo se ha creado una ``pipeline'' básica para el código del backend. Esta se encarga de testear el código, comprobando que se cumplen los requisitos y funcionan de forma correcta todas las rutas de la API. Tras esto, la plataforma de hosting sobre la que se usa el servidor de pruebas, se encarga de desplegar la nueva versión del código de forma automática si todos los test se han realizado de forma correcta. Esto se ha realizado mediante la herramienta Github Actions, integrada en el propio repositorio de código del proyecto.
+
+\section{Desarrollo}
+
+Parte del desarollo ha tenido que ver con la implementación de operaciones CRUD (Create, Read, Update and Delete) sobre la base de datos y los archivos referentes al sitema. Aun así, ha habido partes de desarrollo más particular, los cuales creo que son más suceptibles de comentar.
+
+\subsection{Sistema de autenticación}
+
+Para el sistema de autenticación se buscó implementar el mecanismo explicado en la fase de diseño. La implementación de los métodos explicados se basa en un sistema de tokens firmados con una clave privada unicamente accesible por el servicio que ejecuta el servidor.
+
+En primer lugar, el login se realiza indicando el usuario y contraseña. En este, primero se comprueba si el usuario existe en el sistema. Si esto es así comprueba que la contraseña, almacenada de forma segura mediante un hash, es la misma que la introducida por el usuario. Si el login es correcto, se creará un token que guardará toda la información de permisos de acceso al usuario. Guardar esta información en los tokens permitirá que no sea necesario realizar una consulta a la base de datos cada vez que se quieran comprobar los permisos del usuario. Esto principalmente busca reducir la carga del servidor.
+
+Una vez logueado el usuario, en cada query realizada a la API, se comprueba si el token proporcionado es válido y si tiene permisos para realizar la acción correspondiente. 
+
+El tiempo de caducidad de los tokens se limita a 15 minutos. Debido a que los permisos de acceso van dentro del token, si el token no tuviese caducidad, no podríamos modificar el usuario y limitar su acceso. Para que el usuario no se vea obligado a introducir su usuario y contraseña cada 15 minutos, se crean los token de refresco. El token de refresco se genera en el login y se guarda en la base de datos. Cuando se quiere generar un nuevo token de autenticación, el usuario enviará una petición de refresco indicando este token. En este proceso se accede a la base de datos de forma que comprueba si este aún tiene validez. Este no tendrá validez cuando el usuario haya sido o eliminado del sistema, o se hayan editado sus permisos. En ambos casos se habrá eliminado el token de refresco de la base de datos. Con este sistema se consigue que una vez se edita o elimina un usuario, este tenga que renovar su token acceso en al menos 15 minutos. 
+
+Con este sistema se consiguen principalmente tres objetivos buscados: que el usuario pueda tener una sesión abierta de forma ilimitada, que pueda cerrar la sesión y que se actualicen sus permisos al ser editado o eliminado.
+
+\subsection{Sistema de estadísticas}
+
+Según lo consensuado con los clientes, las estadísticas mostradas no debían de ser solo las actuales si no las transcurridas a través del tiempo. Buscando esto, se implementó una forma de almacenar y generar las estadísticas solicitadas de forma periódica. 
+
+La solucion consiste en el almacenamiento de las estadísticas diarias y acceso posterior a estas. Estas se almacenan en una tabla de la base de datos y son calculadas una vez al día en los momentos de menor carga del servidor. A la hora de acceder a estas según el periodo de tiempo solicitado, se obtienen con una simple consulta a la base de datos. 
+
+\subsection{Sistema de notificaciones}
+
+Otra de las características que la fundación solicitaba era la notificación de las citas de las personas a los usuarios administradores. Para la implementación de esto, se hizo uso de las herramientas que proporcionaba el framework Expo \cite{expo-notifications}. 
+
+El sistema de notificaciones funciona de la siguiente forma: el usuario al iniciar sesión envía un número único que identifica al dispositivo en el que está conectado. Este identificador se almacena en el servicio externo de notificaciones de Expo. Además de esto, es almacenado en un array asociativo del sistema. Cada día se obtienen las citas a notificar y se toman todas los identificadores de los dispositivos con usuarios administradores actualmente autenticados en el sistema y se envían. 
+
+\section{Manual de usuario}
+
