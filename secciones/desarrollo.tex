@@ -46,6 +46,3 @@ La solución consiste en el almacenamiento de las estadísticas diarias y acceso
 Otra de las características que la fundación solicitaba era la notificación de las citas de las personas a los usuarios administradores. Para la implementación de esto, se hizo uso de las herramientas que proporcionaba el framework Expo \cite{expo-notifications}. 
 
 El sistema de notificaciones funciona de la siguiente forma: el usuario al iniciar sesión envía un número único que identifica al dispositivo en el que está conectado. Este identificador se almacena en el servicio externo de notificaciones de Expo. Además de esto, es almacenado en un array asociativo del sistema. Cada día se obtienen las citas a notificar y se toman todas los identificadores de los dispositivos con usuarios administradores actualmente autenticados en el sistema y se envían. 
-
-\section{Manual de usuario}
-
