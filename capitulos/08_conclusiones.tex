@@ -1,5 +1,27 @@
 \chapter{Conclusiones y trabajos futuros}
 
+La \textit{Fundación Escuela de Solidaridad} lleva más de 30 años trabajando con personas en situación de exclusión social. Trabajan ayudando a más de 100 beneficiarios cada año con la ayuda de donaciones y voluntarios.
+
+Su labor les llevó a necesitar una herramienta que facilitase el trabajo y el acceso a la información relacionada con la fundación. Para esto solicitaron una aplicación móvil que permitiese gestionar la información de los beneficiarios, socios, voluntarios y colaboradores de la fundación. Junto con esto, solicitaron el poder gestionar los alojamientos de la fundación. Todo esto se complementó con la inclusión de una sección para gestionar las actividades de la fundación. 
+
+Se desarrollaron reuniones con los directores de la asociación buscando recoger las necesidades y lo que estos buscaban. Esto se plasmó en los requisitos del proyecto junto con los casos de uso que se realizaron como un primer acercamiento al funcionamiento del sistema completo. 
+
+Una vez especificado el proyecto se buscaron otras aplicaciones o productos que pudieran realizar lo solicitado. Primero se buscaron aplicaciones desarrolladas con el foco puesto en organizaciones sin ánimo de lucro. La mayoría de estas no cumplían con las exigencias de la fundación, sobre todo porque en su mayoría estaban dirigidas a la gestión del ámbito económico. Tras esto, se buscaron soluciones tecnológicas utilizadas por organizaciones similares, pero no se llegó a conocer las que estas usaban. Por último, se aportaron soluciones de software que se podrían utilizar para solucionar el problema y las necesidades planteadas, llegando a la conclusión que ninguna de estas era lo suficientemente válida y que la mejor solución sería la de desarrollar una aplicación personalizada para ellos. 
+
+Tras esta decisión, primero se diseñó la arquitectura del sistema. Para esta se utilizó el patrón Modelo, Vista, Controlador, separando al API como vista de la inteligencia de negocio y finalmente el modelo que interactuaba con la base de datos o los documentos del sistema. Junto con esto se diseño la estructura de la base de datos, buscando plasmar las relaciones entre las diferentes entidades y que datos iba a almacenar cada una de estas. 
+
+Antes de comenzar con el desarrollo de software, se realizaron los diseños de la interfaz de usuario de la aplicación. Aquí, se tomaron decisiones sobre los colores a usar, así como tipografías, tamaños e iconos. Todo esto se plasmó en diferentes diseños que permitirían tener un estilo a seguir a la hora de desarrollar la aplicación. 
+
+El desarrollo y diseño de ciertas partes del sistema, se hicieron siguiendo la metodología ágil SCRUM. Al no haber más de un desarrollador, este desempeñaba el rol de Scrum Master así como el de desarrollador. Por otra parte, el tutor, desarrollaba el papel de Product Owner. Este último revisaba el producto de forma periódica mediante sprints periódicos de dos semanas. En las reuniones de fin de sprint, se mostraban las nuevas funcionalidades desarrolladas y eran rectificadas por el Product Owner. Justo después de esta reunión, se decidían las tareas a realizar para la siguiente iteración. 
+
+Las tareas fueron divididas en base a su prioridad de uso e importancia para los clientes. Con el objetivo de garantizar que se alcanzase un producto final válido en una situación en la que no se llegase a realizar el desarrollo completo, el tener las funcionalidades más usadas por el cliente, permitiría tener una solución más completa que si estas se desarrollasen de forma arbitraria.
+
+Tras analizar ciertas alternativas, las tecnologías utilizadas para el desarrollo del proyecto fueron React Native, que permitiría un solo proceso de desarrollo tanto para Android como para IOS, MySQL para la gestión de la base de datos, buscando dar fiabilidad a la información almacenada y Node.Js completando así el ``stack'' de desarrollo Javascript.
+
+Entre todas las características desarrolladas, destacan tres por su caracter diferencial. Una de ellas fue el sistema de autenticación basado en tokens, el cual fue diseñado buscando conseguir una solución que permitiese las sesiones indefinidas de los usuarios con la información de este siempre actualizada. La segunda, el sistema de estadísticas el cual permitía calcular periódicamente la información solicitada por los clientes y mostrar un histórico de esta. En último lugar, el sistema de notificaciones, realizado mediante un servicio externo que identificaba a cada dispositivo en función del usuario el cual ha iniciado sesión para enviar notificaciones relacionadas con citas.
+
+\section{Consecución de objetivos}
+
 En revisión de todos los objetivos planteados al inicio del proyecto, creo que se ha conseguido desarrollar una solución que los cumpla todos. El objetivo principal, en base a las exigencias del cliente ha sido cumplido. La gestión de personas, actividades y casas se ha cumplido con las exigencias impuestas.
 
 En cuanto a los objetivos específicos fueron creados buscando el desarrollo de un producto correcto y de calidad. El primero de ellos creo que ha sido cumplido. Todos los datos existentes en el sistema y solicitados en las reuniones con los clientes han sido contemplados en la solución final. La herramienta permite la creación, acceso, actualización y eliminación de todos ellos.
