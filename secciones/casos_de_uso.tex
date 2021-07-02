@@ -4,7 +4,7 @@
 
 Tras las reuniones con los clientes, se determinaron los perfiles de personas que iban a utilizar el sistema y se plasmaron en los requisitos. Estos usarán el sistema en forma de usuarios y representados por diferentes roles.
 
-Dentro que se han determinado las posibles acciones dentro de cada rol, para clarificar cada tipo de usuario, se definirán estos como los actores que hacen uso del sistema. A parte de estos, no se consideran otros actores externos de forma relevante para explicarlos en forma de tabla. Son los siguientes: 
+Dentro de que se han determinado las posibles acciones dentro de cada rol, para clarificar cada tipo de usuario, se definirán estos como los actores que hacen uso del sistema. A parte de esto, no se consideran otros actores externos de forma relevante para explicarlos en forma de tabla. Son los siguientes: 
 
 \begin{table}[H]
     \centering
@@ -152,7 +152,7 @@ Dentro que se han determinado las posibles acciones dentro de cada rol, para cla
 
 \subsection{Usuarios}
 
-El sistema estará planteado de forma que solo el usuario administrador pueda gestionar los usuarios del sistema. Es por esto, que este tipo de usuarios estén dirigidos a personas con un mayor nivel de responsabilidad en la fundación. El resto de usuarios, solo podrán loguearse en el sistema, es decir, solicitar permisos de acceso a este para poder acceder a los recursos pertinentes y desloguearse, buscando que el sistema invalide los mecanismos de acceso a la información para este usuario.
+El sistema estará planteado de forma que solo el usuario administrador pueda gestionar los usuarios del sistema. Es por esto, que este tipo de usuarios estén dirigidos a personas con un mayor nivel de responsabilidad en la fundación. El resto de usuarios, solo podrán loguearse en el sistema, es decir, solicitar permisos de acceso a los recursos pertinentes y desloguearse, buscando que el sistema invalide los mecanismos de acceso a la información para este usuario.
 
 El diagrama de casos de uso que representa estas acciones viene representado en la Figura \ref{fig:cu_usuarios}. En esta se puede ver como el actor referente a los usuarios administradores gestionan a los usuarios, mientras que todos los demás solo tienen acceso a métodos de login y logout. 
 
@@ -163,7 +163,7 @@ El diagrama de casos de uso que representa estas acciones viene representado en 
     \label{fig:cu_usuarios}
 \end{figure}
 
-Dentro de la gestión de usuarios, el caso de uso a destacar, por tener un flujo de funcionamiento diferente a los demás y alejado de operaciones simples sobre datos, será el de login. Para entender mejor la idea de este, se ha desarrollado una descripción este en la Tabla \ref{fig:cu_usuarios_login}.
+Dentro de la gestión de usuarios, el caso de uso a destacar, por tener un flujo de funcionamiento diferente a los demás y alejado de operaciones simples sobre datos, será el de login. Para entender mejor la idea de este, se ha desarrollado una descripción de este en la Tabla \ref{fig:cu_usuarios_login}.
 
 \begin{table}[hp!]
     \centering
@@ -235,9 +235,9 @@ Dentro de la gestión de usuarios, el caso de uso a destacar, por tener un flujo
 
 \subsection{Personas}
 
-En la gestión de todo lo referente a las personas, habrá mas operaciones. En este, no solo el usuario administrador tendrá el protagonismo, sin no que también participarán los usuarios generales e invitados si tienen los respectivos permisos.
+En la gestión de todo lo referente a las personas, habrá mas operaciones. En este, no solo el usuario administrador tendrá el protagonismo, sino que también participarán los usuarios generales e invitados, si cuentan con los respectivos permisos.
 
-Aquí no solo entran los datos directos de las personas, si no también la gestión de sus documentos, citas, y su estado actual, si es de alta o de baja. El diagrama de casos de uso referente a esta sección está representado en la Figura \ref{fig:cu_personas}. 
+Aquí no solo entran los datos directos de las personas, si no también la gestión de sus documentos, citas y su estado actual, si es de alta o de baja. El diagrama de casos de uso referente a esta sección está representado en la Figura \ref{fig:cu_personas}. 
 
 \begin{figure}[h!]
     \centering
@@ -402,7 +402,7 @@ Dentro de los casos de usos representados, el que más dudas puede generar será
 
 \subsection{Alojamientos}
 
-En la gestión de alojamientos, ocurre como con la gestión de personas, participan los usuarios con el rol de administrador, invitado y general. Esta gestión consistirá principalmente en la gestión de las propiedades del alojamiento junto con los residentes de cada una de las habitaciones. 
+En la gestión de alojamientos, ocurre como con la gestión de personas, participan los usuarios con el rol de administrador, invitado y general. Esta gestión consistirá principalmente en la modificación de las propiedades del alojamiento junto con los residentes de cada una de las habitaciones. 
 
 Dentro de los casos de usos mostrados en el diagrama de casos de uso de la Figura \ref{fig:cu_alojamientos}, los más difíciles de entender pueden ser los referidos a la modificación de una habitación. Con el objetivo de explicar un poco mejor el funcionamiento de ambos, se han realizado la descripción correspondiente de cada uno de ellos en las tablas \ref{fig:cu_alojamientos_modificar} y \ref{fig:cu_alojamientos_modificarresidentes}. 
 
