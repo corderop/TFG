@@ -165,7 +165,7 @@ Las dependencias de los casos de uso ``Editar usuario'' y ``Eliminar usuario'' s
     \label{fig:cu_usuarios}
 \end{figure}
 
-Dentro de la gestión de usuarios, el caso de uso a destacar, por tener un flujo de funcionamiento diferente a los demás y alejado de operaciones simples sobre datos, será el de login. Para entender mejor la idea de este, se ha desarrollado una descripción de este en la Tabla \ref{fig:cu_usuarios_login}.
+Los casos de uso ``Crear usuario'', ``Editar usuario'', ``Eliminar usuario'', ``Consular la información de un usuario'' y ``Logout'' tienen un funcionamiento simple y no necesitan ser desglosados. Por otra parte, para facilitar la comprensión del caso de uso de ``Login'', se ha desarrollado una descripción de este en la Tabla \ref{fig:cu_usuarios_login}.
 
 \begin{table}[hp!]
     \centering
@@ -250,7 +250,7 @@ Las dependencias principales entre los casos de uso son parecidas a la de los ca
     \label{fig:cu_personas}
 \end{figure}
 
-Dentro de los casos de usos representados, el que más dudas puede generar será el de dar de alta o de baja a las personas. El dar de baja es algo confuso, y puede verse relacionado con el eliminar una personas del sistema. Las plantillas de estos casos de uso (Tablas \ref{fig:cu_personas_altabaja} y \ref{fig:cu_personas_eliminar}) clarifican el funcionamiento que se busca en estos.
+En cuanto a la gestión de las personas, los casos de uso ``Añadir personas'', ``Editar personas'', ``Crear / modificar / eliminar cita'', ``Consultar datos de personas'', ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas'' son sencillos y de fácil comprensión, por lo que no necesitan una explicación extra. En cuanto a los dos restantes, los casos de uso ``Dar de alta / baja personas'' y ``Eliminar personas'' pueden dar pie a equivocaciones por su similitud. Para evitar esto, se han detallado en las tablas \ref{fig:cu_personas_altabaja} y \ref{fig:cu_personas_eliminar}.
 
 \begin{table}[hp!]
     \centering
@@ -408,8 +408,6 @@ Dentro de los casos de usos representados, el que más dudas puede generar será
 
 En la gestión de alojamientos, ocurre como con la gestión de personas, participan los usuarios con el rol de administrador, invitado y general. Esta gestión consistirá principalmente en la modificación de las propiedades del alojamiento junto con los residentes de cada una de las habitaciones. 
 
-Dentro de los casos de usos mostrados en el diagrama de casos de uso de la Figura \ref{fig:cu_alojamientos}, los más difíciles de entender pueden ser los referidos a la modificación de una habitación. Con el objetivo de explicar un poco mejor el funcionamiento de ambos, se han realizado la descripción correspondiente de cada uno de ellos en las tablas \ref{fig:cu_alojamientos_modificar} y \ref{fig:cu_alojamientos_modificarresidentes}. 
-
 En este caso, al modificar una casa, será estrictamente necesario conocer la información de esta. Por otra parte, la modificación de la información de la casas no tiene porque suponer la modificación de residentes o habitaciones, lo que provoca las relaciones de extensión entre ``Modificar casas'' y ``Eliminar habitación'', ``Modificar habitación'' y ``Añadir habitación''. El caso de uso ``Modificar habitación de residentes'' se especifica de forma exclusiva, buscando concretar que será la única modificación posible para un usuario general.
 
 \begin{figure}[h!]
@@ -418,6 +416,8 @@ En este caso, al modificar una casa, será estrictamente necesario conocer la in
     \caption{Diagrama de casos de uso referente a la gestión de alojamientos}
     \label{fig:cu_alojamientos}
 \end{figure}
+
+En la gestión de las alojamientos, los casos de uso ``Añadir casa'', ``Eliminar casa'', ``Obtener información de la casa'', ``Eliminar habitación'' y ``Añadir habitación'' son sencillos, por lo que no necesitan una explicación avanzada. En cuanto a los dos restantes, los casos de uso ``Modificar habitación'' y ``Modificar habitación de resientes'' pueden causar confusión ya que uno aunque se relacionan entre si, no dependen uno del otro. Su comportamiento está detallado en las tablas \ref{fig:cu_alojamientos_modificar} y \ref{fig:cu_alojamientos_modificarresidentes}.
 
 \begin{table}[hp!]
     \centering
@@ -430,7 +430,7 @@ En este caso, al modificar una casa, será estrictamente necesario conocer la in
         \hline
         \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                       \\ 
         \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                        \\ 
+        \textbf{Referencias}                                   &  CU\_05               & \multicolumn{2}{l|}{}                                                                        \\ 
         \hline
         \textbf{Precondición}                                  & \multicolumn{3}{l|}{Se está modificando la casa}                                                                    \\ 
         \hline
@@ -503,7 +503,7 @@ En este caso, al modificar una casa, será estrictamente necesario conocer la in
         \hline
         \textbf{Tipo}                                          & \multicolumn{3}{l|}{Primario}                                                                                                       \\ 
         \hline
-        \textbf{Referencias}                                   &                      & \multicolumn{2}{l|}{}                                                                                        \\ 
+        \textbf{Referencias}                                   &    CU\_04              & \multicolumn{2}{l|}{}                                                                                        \\ 
         \hline
         \textbf{Precondición}                                  & \multicolumn{3}{l|}{}                                                                                                               \\ 
         \hline
@@ -576,7 +576,7 @@ En este caso, al modificar una casa, será estrictamente necesario conocer la in
 
 \subsection{Diagramas de casos de uso para la gestión de actividades}
 
-Por último, en la parte de la aplicación referente a las actividades, podrán acceder todos los usuarios. Los casos de uso aquí son bastante básicos. Estos están representados en el diagrama de casos de uso de la Figura \ref{fig:cu_actividades}. Dentro de estos, lo único que puede generar dudas es como se calcular el ranking. Esto vendrá dado por el caso de uso referente a puntuar a los asistentes de una actividad. Aquí se calculará la información del usuario con respecto al ranking, para propiciar un futuro acceso más rápido a este. Este se ve reflejado en el caso de uso 6 (Figura \ref{fig:cu_actividades_puntuacion}).
+Por último, en la parte de la aplicación referente a las actividades, podrán acceder todos los usuarios. Los casos de uso aquí son bastante básicos. Estos están representados en el diagrama de casos de uso de la Figura \ref{fig:cu_actividades}. 
 
 Las relaciones entre los casos de uso, vienen dadas, igual que en los diagramas previos, por la necesidad de conocer la información de la actividad antes de realizar cualquier acción sobre esta. Para los casos de uso ``Editar actividad'' o ``Eliminar actividad'', será necesario conocer la infomación de esta. Para ``Puntuar a los asistentes de una actividad'', será necesario conocer a estos y sus puntuaciones previas si existen. Para ``Desapuntarse de una actividad'' o ``Apuntarse a una actividad'', será igualmente necesario conocer la información de la actividad y si se está ya apuntado. 
 
@@ -586,6 +586,8 @@ Las relaciones entre los casos de uso, vienen dadas, igual que en los diagramas 
     \caption{Diagrama de casos de uso referente a la gestión de actividades}
     \label{fig:cu_actividades}
 \end{figure}
+
+Igual que en los apartados previos, los casos de uso ``Añadir actividad'', ``Eliminar actividad'', ``Editar actividad'', ``Ver información de actividad'', ``Desapuntarse de una actividad'', ``Apuntarse a una actividad'' y ``Ver ranking y puntuación'' son sencillos, por lo que no necesitan una explicación avanzada. El único que puede generar dudas es ``Puntuar a los asistentes de una actividad'', el cual está detallado en la tabla \ref{fig:cu_actividades_puntuacion}.
 
 \begin{table}[h!]
     \centering
