@@ -1,16 +1,24 @@
 \chapter{Estado del arte}
 
-\section{Dominio del problema}
+\section{Aplicaciones móviles}
 
-\subsection{Aplicaciones móviles}
+Los ``smartphones'' o teléfonos inteligentes han cambiado el paradigma de acceso a internet. Muchos fechan la aparición del smartphone en 1993, cuando IBM presentó el teléfono ``The Simon''. En esta época estos dispositivos estaban dirigidos princpalmente al mundo empresarial, y difícilmente llegaban a manos del consumidor. Hasta 2007, cuando Apple presentó el primer Iphone y Google la primera versión de Android, los móviles no llegaron al mercado general de forma masiva. \cite{sarwar2013impact}
 
-Los ``smartphones'' o teléfonos inteligentes han cambiado el paradigma de acceso a internet. Desde sus primeras apariciones a principios de la década de 2010, el uso y expansión de sus dispositivos ha aumentado exponencialmente. La evolución de estos sistemas ha incurrido y convertido muchos modelos de negocio
+En 2015 se estimaba que un 68\% de personas residentes en países con economías avanzadas tenían un smartphone \cite{poushter2016smartphone}. En 2017 el número de descargadas de aplicaciones desde móviles Android superó los 200 mil millones. \cite{10.1145/3278532.3278558}. En un mercado creciente, la aparición de aplicaciones móviles supone una irrupción en el mercado de internet.
 
-Actualmente casi cualquier persona tiene un teléfono móvil, con la posibilidad de acceder a miles de aplicaciones desarrolladas para estos dispositivos. Actualemnte los móviles no solo cumplen una función de comunicación entre personas, si no que han abierto con su desarrollo un abanico de oportunidades.
+Las aplicaciones móviles vienen a cambiar la forma de uso de los dispositivos inteligentes. Se pasa de interactuar mediante un teclado y un ratón a utilizar superficies táctiles. Esto abre un abanico de posibilidades en el desarrollo de software para estos dispositivos.
 
-Aunque el enfoque inicial de este tipos de dispositivos fuese el de ser una herramienta de comunicación, el avance tecnológico ha permitido que cada vez puedan ser usados como herramientas de trabajo. Pantallas cada vez más grandes y soluciones para convertir móviles en dispostivos de escritorio hacen que el desarrollo de aplicaciones móviles no se limite al propio dispositivo. 
+Además, estos dispositivos y sus aplicaciones no solo proporcionan una nueva forma de interactuar con la información, sino también un aumento en las situaciones de uso de estos dispositivos. El tener un dispositivo móvil que poder llevar y utilizar en cualquier situación permite que las aplicaciones puedan ser adaptadas a nuevas situaciones previamente no contempladas. 
 
-Cabe destacar que cada vez más el desarrollo de aplicaciones móviles se está fusionando con el de soluciones de escritorio. Desde la aparición de frameworks como React Native o Flutter, hasta la aparición de ordenadores con CPU basados en la arquitectura ARM, hacen cada vez más fina la línea entre ambos dispositivos. 
+Inicialmente las aplicaciones móviles solo podían ser desarrolladas mediante lo stacks de tecnologías proporcionadas por los creadores de los sistemas operativos. En Android por ejemplo tenemos Android SDK \cite{android-sdk}, permitiendo el desarrollo de aplicaciones con Java o Klotin, mientras que en IOS tenemos IOS SDK \cite{ios-sdk}, que permite el desarrollo de aplicaciones exclusivas para dispositivos Apple con Objective-C y Swift.
+
+Debido a esta fragmentación de sistemas operativos, surgieron diversas tecnologías que permiten desarrollar aplicaciones móviles para distintos sistemas operativos bajo un mismo proceso de desarrollo. Estas son conocidas como \textit{cross-platform}. Las primeras en aparecer se basaban principalmente en tecnologías utilizadas en la web (HTML, CSS y Javascript) \cite{palmieri2012comparison}. Algunas tecnologías de estas tecnologías son Rhodes, PhoneGap, DragonRad y MoSync. Estas principalmente basan su funcionamiento en un motor de renderizado web e interactúan con el sistema mediante una API. 
+
+Más tarde aparecieron alternativas de desarrollo de aplicaciones que trababan sobre sus propias tecnologías generando finalmente una aplicación nativa en las diferentes plataformas. Estas son conocidas como \textit{cross-compiled}. Entre estas tecnologías destacan React Native y Flutter. Estas permiten generar una aplicación que se comporta como una aplicación nativa en las diferentes plataformas. Esto facilita el proceso de desarrollo. Además, estas tecnologías permiten una fácil adaptación a otros dispositivos, ya sea adaptando una aplicación de React Native a su tecnología ``hermana'' para la web React o creando una aplicación bajo el mismo flujo de desarollo para dispositivos móviles y de escritorio con Flutter 2. 
+
+A todo este flujo de desarrollo se le añade que muchas empresas de desarrollo de hardware y software, estén facilitando la utilización de aplicaciones móviles en dispositivos de escritorio. Esto se puede ver, por ejemplo, en los nuevos ordenadores de Apple que permiten la ejecución de aplicaciones de IOS \cite{macos-ios} o en el nuevo sistema operativo de Microsoft, Windows 11, que permitirá esto mismo con aplicaciones para Android \cite{windows-android}.
+
+Todo esto permite que el desarrollo de aplicaciones para dispositivos móviles sea cada vez más interesante y amplio, no solo para el mercado del entretenimiento, sino también para el desarrollo de herramientas de trabajo.
 
 \section{Trabajos relacionados y aplicaciones dirigidas a asociaciones}
 
