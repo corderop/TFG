@@ -30,6 +30,19 @@ En el \textit{Controlador}, cualquier llamada a la API pasará por el \textit{Se
 
 En cuando al \textit{Modelo}, el \textit{ORM} correspondiente se encargará de acceder y modificar datos en la base de datos y el \textit{Sistema de almacenamiento de documentos}, de hacer lo mismo con documentos y fotografías.   
 
+\subsection{Diagrama de clases conceptual}
+
+Aunque el desarrollo no siga el paradigma de Programación Orientada a Objetos, con objetivo de aclarar como se comunican los modelos de datos en el sistema, como están relacionados, y que acciones se realizan sobre ellos se ha realizado un diagrama de clases conceptual (Figura \ref{fig:dc}). 
+
+En este se puede destacar la relación de agregación que se produce entre los residentes y las habitaciones, ya que una habitación se compone por residentes, pero entendiéndose que pueda existir una habitación sin residentes. Sin embargo, la relación entre habitación y casa se entiende como una composición, en la que una casa está formada por habitaciones, pero esta no se comprende si no existen habitaciones asociadas.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{diseno/sistema/DiagramaDeClases.png}
+    \caption{Diagrama de clases conceptual}
+    \label{fig:dc}
+\end{figure}
+
 \subsection{Diseño de la base de datos}
 
 Al elegir utilizar bases de datos relacionales, uno de los primeros pasos era el diseño. Para este se realizó el diagrama E/R correspondiente (Figura \ref{fig:er}) centrando el diseño en la parte principal, las personas. Para estas se diseño una tabla con los atributos compartidos entre los diferentes tipos, a la cual se añadió una herencia para cada uno de ellos. Algunos atributos de las personas, los cuales necesitaban de multiplicidad, se han añadido como tablas a parte, como es el caso entre otras de las tablas \textit{nacionalidad} o \textit{colectivo}. Por otra parte, las altas y bajas se gestionarán mediante una tabla, para la cual se tendrá que comprobar que la información introducida es coherente, es decir, que cuando alguien está de alta, no se pueda introducir un alta de nuevo, o que no se puedan introducir bajas cuando no existe un alta. Por último, se contempla que las personas tengan relaciones entre ellas. Esto se hace mediante la tabla \textit{relación}, la cual contempla el tipo de relación (madre, padre, hijo, tío, sobrino...).
@@ -40,23 +53,9 @@ La parte de alojamiento de la aplicación está reflejada en las tablas \textit{
 
 El apartado de actividades del sistema estará reflejado mediante la tabla \textit{Actividad} a la cual se relacionarán los residentes cuando un usuario con un residente asociado se apunta a la actividad. La tabla \textit{Ranking} será una tabla calculada en base a las tablas \textit{actividad} y \textit{participación}, que permitirá que aun generando duplicidad de los datos, la recuperación de estos a la hora de obtener las puntuaciones de todos los usuarios se realice en un tiempo aceptable. 
 
-\begin{figure}[]
+\begin{figure}[hp!]
     \centering
     \includegraphics[width=\textwidth]{diseno/base_de_datos/ER.png}
     \caption{Diagrama E/R de la base de datos}
     \label{fig:er}
 \end{figure}
-
-\subsection{Diagrama de clases conceptual}
-
-Aunque el desarrollo no siga el paradigma de Programación Orientada a Objetos, con objetivo de aclarar como se comunican los modelos de datos en el sistema, como están relacionados, y que acciones se realizan sobre ellos se ha realizado un diagrama de clases conceptual (Figura \ref{fig:dc}). 
-
-En este se puede destacar la relación de agregación que se produce entre los residentes y las habitaciones, ya que una habitación se compone por residentes, pero entendiéndose que pueda existir una habitación sin residentes. Sin embargo, la relación entre habitación y casa se entiende como una composición, en la que una casa está formada por habitaciones, pero esta no se comprende si no existen habitaciones asociadas.
-
-\begin{figure}[]
-    \centering
-    \includegraphics[width=\textwidth]{diseno/sistema/DiagramaDeClases.png}
-    \caption{Diagrama de clases conceptual}
-    \label{fig:dc}
-\end{figure}
-
