@@ -156,7 +156,7 @@ El sistema estará planteado de forma que solo el usuario administrador pueda ge
 
 El diagrama de casos de uso que representa estas acciones viene representado en la Figura \ref{fig:cu_usuarios}. En esta se puede ver como el actor referente a los usuarios administradores gestionan a los usuarios, mientras que todos los demás solo tienen acceso a métodos de login y logout. 
 
-Las dependecias de los casos de uso ``Editar usuario'' y ``Eliminar usuario'' sobre ``Consultar la información de un usuario'' vienen principalmente dadas debido a que será necesario conocer la inforamción del usuario, tanto para editar esta como para eliminarlo. 
+Las dependencias de los casos de uso ``Editar usuario'' y ``Eliminar usuario'' sobre ``Consultar la información de un usuario'' vienen principalmente dadas debido a que será necesario conocer la inforamción del usuario, tanto para editar esta como para eliminarlo. 
 
 \begin{figure}[hp!]
     \centering
@@ -241,7 +241,7 @@ En la gestión de todo lo referente a las personas, habrá mas operaciones. En e
 
 Aquí no solo entran los datos directos de las personas, si no también la gestión de sus documentos, citas y su estado actual, si es de alta o de baja. El diagrama de casos de uso referente a esta sección está representado en la Figura \ref{fig:cu_personas}. 
 
-Las dependecias principales entre los casos de uso son parecidas a la de los casos de uso de gestión de usuarios. Para realizar cualquier accion de modificación sobre una persona, esta acción dependerá de conocer la información de esta, contemplado en el caso de uso ``Consultar datos de personas''. El consultar los datos de las personas, podrá conllevar consultar y acceder a los documentos de esta misma, lo cual no será estrictamente necesario. Por su parte de igual forma, para eliminar un documento será necesario conocer estos documentos, lo que provoca la relacion entre ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas''. 
+Las dependencias principales entre los casos de uso son parecidas a la de los casos de uso de gestión de usuarios. Para realizar cualquier acción de modificación sobre una persona, esta acción dependerá de conocer la información de esta, contemplado en el caso de uso ``Consultar datos de personas''. El consultar los datos de las personas, podrá conllevar consultar y acceder a los documentos de esta misma, lo cual no será estrictamente necesario. Por su parte de igual forma, para eliminar un documento será necesario conocer estos documentos, lo que provoca la relacion entre ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas''. 
 
 \begin{figure}[h!]
     \centering
@@ -410,7 +410,7 @@ En la gestión de alojamientos, ocurre como con la gestión de personas, partici
 
 Dentro de los casos de usos mostrados en el diagrama de casos de uso de la Figura \ref{fig:cu_alojamientos}, los más difíciles de entender pueden ser los referidos a la modificación de una habitación. Con el objetivo de explicar un poco mejor el funcionamiento de ambos, se han realizado la descripción correspondiente de cada uno de ellos en las tablas \ref{fig:cu_alojamientos_modificar} y \ref{fig:cu_alojamientos_modificarresidentes}. 
 
-En este caso, al modificar una casa, será estrictamente necesario conocer la información de esta. Por otra parte, la modificación de la información de la casas no tiene porque suponer la modificacion de residentes o habitaciones, lo que provoca las relaciones de extensión entre ``Modificar casas'' y ``Eliminar habitación'', ``Modificar habitación'' y ``Añadir habitación''. El caso de uso ``Modificar habitación de residentes'' se especifica de forma exclusiva, buscando concretar que será la única modificación posible para un usuario general.
+En este caso, al modificar una casa, será estrictamente necesario conocer la información de esta. Por otra parte, la modificación de la información de la casas no tiene porque suponer la modificación de residentes o habitaciones, lo que provoca las relaciones de extensión entre ``Modificar casas'' y ``Eliminar habitación'', ``Modificar habitación'' y ``Añadir habitación''. El caso de uso ``Modificar habitación de residentes'' se especifica de forma exclusiva, buscando concretar que será la única modificación posible para un usuario general.
 
 \begin{figure}[h!]
     \centering
