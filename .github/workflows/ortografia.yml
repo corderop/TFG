@@ -8,10 +8,16 @@ jobs:
   Ortografia:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: 🏗️ Build
+      uses: actions/checkout@v2
+
     - name: 🏗 Instalación de hunspell
       run: |
         sudo apt-get install hunspell hunspell-es hunspell-en-us hunspell-en-gb
+
+    - name: 👀 Command output
+      run: | 
+        find . -name "*.tex" -exec hunspell -d es_ES,en_US,en_GB -p diccionario.dic -L -t -i utf-8 '{}' \;
 
     - name: 💬 Comprobando si existen errores ortográficos
       run: |
