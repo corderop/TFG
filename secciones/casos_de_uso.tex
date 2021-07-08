@@ -1,5 +1,7 @@
 \section{Casos de uso}
 
+Para llegar a un primer acercamiento al funcionamiento del sistema, se han desarrollado una serie de diagramas de casos de uso para cada una de las secciones de la aplicación (gestión de usuarios, gestión de personas, gestión de alojamientos y gestión de actividades). Otras partes de la aplicación no han sido contempladas debido a que su comprensión está más cerca de la implementación que del análisis y diseño del proyecto, como es todo lo referente a las estadísticas y notificaciones.   
+
 \subsection{Actores del sistema}
 
 Tras las reuniones con los clientes, se determinaron los perfiles de personas que iban a utilizar el sistema y se plasmaron en los requisitos. Estos usarán el sistema en forma de usuarios y representados por diferentes roles.
@@ -241,7 +243,7 @@ En la gestión de todo lo referente a las personas, habrá mas operaciones. En e
 
 Aquí no solo entran los datos directos de las personas, si no también la gestión de sus documentos, citas y su estado actual, si es de alta o de baja. El diagrama de casos de uso referente a esta sección está representado en la Figura \ref{fig:cu_personas}. 
 
-Las dependencias principales entre los casos de uso son parecidas a la de los casos de uso de gestión de usuarios. Para realizar cualquier acción de modificación sobre una persona, esta acción dependerá de conocer la información de esta, contemplado en el caso de uso ``Consultar datos de personas''. El consultar los datos de las personas, podrá conllevar consultar y acceder a los documentos de esta misma, lo cual no será estrictamente necesario. Por su parte de igual forma, para eliminar un documento será necesario conocer estos documentos, lo que provoca la relacion entre ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas''. 
+Las dependencias principales entre los casos de uso son parecidas a la de los casos de uso de gestión de usuarios. Para realizar cualquier acción de modificación sobre una persona, esta acción dependerá de conocer la información de esta, contemplado en el caso de uso ``Consultar datos de personas''. El consultar los datos de las personas, podrá conllevar consultar y acceder a los documentos de esta misma, lo cual no será estrictamente necesario. De igual forma, para eliminar un documento será necesario conocer estos documentos, lo que provoca la relacion entre ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas''. 
 
 \begin{figure}[h!]
     \centering
@@ -250,7 +252,7 @@ Las dependencias principales entre los casos de uso son parecidas a la de los ca
     \label{fig:cu_personas}
 \end{figure}
 
-En cuanto a la gestión de las personas, los casos de uso ``Añadir personas'', ``Editar personas'', ``Crear / modificar / eliminar cita'', ``Consultar datos de personas'', ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas'' son sencillos y de fácil comprensión, por lo que no necesitan una explicación extra. En cuanto a los dos restantes, los casos de uso ``Dar de alta / baja personas'' y ``Eliminar personas'' pueden dar pie a equivocaciones por su similitud. Para evitar esto, se han detallado en las tablas \ref{fig:cu_personas_altabaja} y \ref{fig:cu_personas_eliminar}.
+En cuanto a la gestión de las personas, los casos de uso ``Añadir personas'', ``Editar personas'', ``Crear / modificar / eliminar cita'', ``Consultar datos de personas'', ``Añadir o eliminar documentos de personas'' y ``Consultar documentos de personas'' son sencillos y de fácil comprensión, por lo que no necesitan una explicación extra. Los dos restantes, ``Dar de alta / baja personas'' y ``Eliminar personas'' pueden dar pie a equivocaciones por su similitud. Para evitar esto, se han detallado en las tablas \ref{fig:cu_personas_altabaja} y \ref{fig:cu_personas_eliminar}.
 
 \begin{table}[hp!]
     \centering
